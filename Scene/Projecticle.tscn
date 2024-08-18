@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bod6il00h1p35"]
+[gd_scene load_steps=14 format=3 uid="uid://bod6il00h1p35"]
 
+[ext_resource type="Script" path="res://Scene/Projecticle.gd" id="1_dyvik"]
 [ext_resource type="Texture2D" uid="uid://cd3nkvabevkps" path="res://Assets/Arrow_Untitled.png" id="1_wg3c1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7mmh"]
@@ -45,10 +46,44 @@ shadow_mesh = SubResource("ArrayMesh_vcolg")
 radius = 0.0865541
 height = 0.71459
 
+[sub_resource type="Curve" id="Curve_ftvmc"]
+_data = [Vector2(0, 1), 0.0, -2.2204, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_8a3p0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_hrhfb"]
+_data = [Vector2(0, 1), 0.0, -2.04372, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_a4s5y"]
+curve_x = SubResource("Curve_ftvmc")
+curve_y = SubResource("Curve_8a3p0")
+curve_z = SubResource("Curve_hrhfb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_45jmx"]
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveXYZTexture_a4s5y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvut8"]
+transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
+shading_mode = 0
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_i83fg"]
+material = SubResource("StandardMaterial3D_rvut8")
+size = 0.1
+sections = 2
+section_length = 0.5
+
 [node name="Projectile" type="RigidBody3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 collision_layer = 5
 mass = 0.05
+script = ExtResource("1_dyvik")
 
 [node name="Arrow" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_8y7up")
@@ -57,3 +92,18 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.47918e-08, 0.431169)
 shape = SubResource("CapsuleShape3D_phm4s")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -5.43998e-08, 1.24452)
+amount = 100
+lifetime = 0.5
+trail_lifetime = 0.6
+process_material = SubResource("ParticleProcessMaterial_45jmx")
+draw_pass_1 = SubResource("RibbonTrailMesh_i83fg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
