@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b21jqkq3uy1xq"]
+[gd_scene load_steps=8 format=3 uid="uid://cjyujyuhskugb"]
 
-[ext_resource type="Script" path="res://Scene/scaleDead.gd" id="1_46slh"]
-[ext_resource type="Material" uid="uid://div7ycob07tms" path="res://Assets/Yellow.tres" id="2_1p38i"]
-[ext_resource type="Material" uid="uid://d4gjn10na26tt" path="res://Assets/platinum.tres" id="2_8cxe1"]
-[ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="3_g4wvj"]
+[ext_resource type="Script" path="res://Scene/scaleDead.gd" id="1_tn2de"]
+[ext_resource type="Material" uid="uid://d0bihjxmyre13" path="res://Assets/orange.tres" id="2_4pwgf"]
+[ext_resource type="Material" uid="uid://div7ycob07tms" path="res://Assets/Yellow.tres" id="2_j7uj5"]
+[ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="3_c5a0i"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8vdyc"]
 _surfaces = [{
@@ -28,7 +28,7 @@ _surfaces = [{
 "index_count": 216,
 "index_data": PackedByteArray(8, 0, 17, 0, 18, 0, 8, 0, 7, 0, 17, 0, 23, 0, 14, 0, 27, 0, 23, 0, 4, 0, 14, 0, 3, 0, 12, 0, 13, 0, 3, 0, 2, 0, 12, 0, 9, 0, 18, 0, 19, 0, 9, 0, 8, 0, 18, 0, 5, 0, 23, 0, 22, 0, 5, 0, 4, 0, 23, 0, 6, 0, 15, 0, 16, 0, 6, 0, 5, 0, 15, 0, 4, 0, 13, 0, 14, 0, 4, 0, 3, 0, 13, 0, 0, 0, 24, 0, 10, 0, 0, 0, 20, 0, 24, 0, 1, 0, 10, 0, 11, 0, 1, 0, 0, 0, 10, 0, 7, 0, 16, 0, 17, 0, 7, 0, 6, 0, 16, 0, 10, 0, 24, 0, 29, 0, 2, 0, 11, 0, 12, 0, 2, 0, 1, 0, 11, 0, 8, 0, 0, 0, 1, 0, 8, 0, 9, 0, 0, 0, 7, 0, 1, 0, 2, 0, 7, 0, 8, 0, 1, 0, 6, 0, 2, 0, 3, 0, 6, 0, 7, 0, 2, 0, 5, 0, 3, 0, 4, 0, 5, 0, 6, 0, 3, 0, 5, 0, 26, 0, 15, 0, 5, 0, 22, 0, 26, 0, 21, 0, 19, 0, 25, 0, 21, 0, 9, 0, 19, 0, 11, 0, 29, 0, 31, 0, 11, 0, 10, 0, 29, 0, 13, 0, 33, 0, 35, 0, 13, 0, 12, 0, 33, 0, 14, 0, 35, 0, 36, 0, 14, 0, 13, 0, 35, 0, 37, 0, 16, 0, 15, 0, 37, 0, 34, 0, 16, 0, 34, 0, 17, 0, 16, 0, 34, 0, 32, 0, 17, 0, 32, 0, 18, 0, 17, 0, 32, 0, 30, 0, 18, 0, 12, 0, 31, 0, 33, 0, 12, 0, 11, 0, 31, 0, 28, 0, 25, 0, 19, 0, 14, 0, 36, 0, 27, 0, 37, 0, 15, 0, 26, 0, 30, 0, 19, 0, 18, 0, 30, 0, 28, 0, 19, 0, 22, 0, 27, 0, 26, 0, 22, 0, 23, 0, 27, 0, 20, 0, 25, 0, 24, 0, 20, 0, 21, 0, 25, 0, 35, 0, 37, 0, 36, 0, 35, 0, 34, 0, 37, 0, 33, 0, 34, 0, 35, 0, 33, 0, 32, 0, 34, 0, 31, 0, 32, 0, 33, 0, 31, 0, 30, 0, 32, 0, 29, 0, 30, 0, 31, 0, 29, 0, 28, 0, 30, 0, 24, 0, 28, 0, 29, 0, 24, 0, 25, 0, 28, 0, 26, 0, 36, 0, 37, 0, 26, 0, 27, 0, 36, 0, 20, 0, 9, 0, 21, 0, 20, 0, 0, 0, 9, 0),
 "lods": [0.308746, PackedByteArray(124, 0, 141, 0, 145, 0, 125, 0, 118, 0, 142, 0, 151, 0, 136, 0, 138, 0, 136, 0, 36, 0, 138, 0, 136, 0, 135, 0, 36, 0, 138, 0, 36, 0, 37, 0, 37, 0, 143, 0, 138, 0, 119, 0, 139, 0, 143, 0, 37, 0, 160, 0, 143, 0, 36, 0, 160, 0, 37, 0, 114, 0, 131, 0, 135, 0, 160, 0, 148, 0, 144, 0, 135, 0, 161, 0, 36, 0, 161, 0, 160, 0, 36, 0, 135, 0, 130, 0, 161, 0, 130, 0, 129, 0, 161, 0, 129, 0, 158, 0, 161, 0, 158, 0, 160, 0, 161, 0, 160, 0, 158, 0, 146, 0, 150, 0, 146, 0, 159, 0, 150, 0, 127, 0, 147, 0, 108, 0, 128, 0, 130, 0, 107, 0, 156, 0, 128, 0, 107, 0, 149, 0, 157, 0, 149, 0, 112, 0, 126, 0, 122, 0, 126, 0, 111, 0, 120, 0, 152, 0, 140, 0, 153, 0, 133, 0, 137, 0, 154, 0, 113, 0, 134, 0, 115, 0, 109, 0, 132, 0, 121, 0, 110, 0, 116, 0, 155, 0, 123, 0, 117, 0), 0.409034, PackedByteArray(96, 0, 88, 0, 92, 0, 97, 0, 77, 0, 89, 0, 105, 0, 94, 0, 89, 0, 37, 0, 105, 0, 89, 0, 89, 0, 85, 0, 37, 0, 87, 0, 105, 0, 37, 0, 87, 0, 81, 0, 105, 0, 73, 0, 81, 0, 87, 0, 101, 0, 85, 0, 90, 0, 78, 0, 102, 0, 91, 0, 103, 0, 72, 0, 86, 0, 74, 0, 98, 0, 82, 0, 79, 0, 99, 0, 75, 0, 104, 0, 80, 0, 76, 0, 100, 0, 93, 0, 83, 0, 106, 0, 84, 0, 95, 0), 1.10349, PackedByteArray(61, 0, 57, 0, 69, 0, 62, 0, 66, 0, 58, 0, 67, 0, 50, 0, 59, 0, 51, 0, 54, 0, 60, 0, 60, 0, 54, 0, 71, 0, 52, 0, 63, 0, 55, 0, 68, 0, 64, 0, 53, 0, 65, 0, 70, 0, 56, 0)],
-"material": ExtResource("2_1p38i"),
+"material": ExtResource("2_j7uj5"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 162,
@@ -44,10 +44,10 @@ points = PackedVector3Array(1.2489, -0.138956, 0.690324, -0.962865, -0.24311, 1.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.371805)
 mass = 5.0
 angular_velocity = Vector3(0.523599, 0.872665, 0.261799)
-script = ExtResource("1_46slh")
+script = ExtResource("1_tn2de")
 
 [node name="ScaleDeadMesh" type="MeshInstance3D" parent="."]
-material_override = ExtResource("2_8cxe1")
+material_override = ExtResource("2_4pwgf")
 mesh = SubResource("ArrayMesh_i2leq")
 skeleton = NodePath("")
 
@@ -58,7 +58,7 @@ shape = SubResource("ConvexPolygonShape3D_sanu0")
 wait_time = 0.05
 one_shot = true
 
-[node name="Arrow2" parent="." instance=ExtResource("3_g4wvj")]
+[node name="Arrow2" parent="." instance=ExtResource("3_c5a0i")]
 transform = Transform3D(3, 0, 0, 0, 0.261571, 2.98857, 0, -2.98857, 0.261571, 0, -0.0219461, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

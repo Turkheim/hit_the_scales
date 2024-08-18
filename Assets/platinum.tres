@@ -4,3 +4,5 @@
 albedo_color = Color(0.20948, 0.540313, 0.576978, 1)
 metallic = 1.0
 roughness = 0.4
+grow = true
+grow_amount = 0.1

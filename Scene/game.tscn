@@ -30,6 +30,21 @@ radius = 0.4
 radius = 0.114687
 height = 0.901155
 
+[sub_resource type="Animation" id="Animation_41d4g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-30.3128, 22.6092, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_m6xke"]
 resource_name = "bobing"
 loop_mode = 2
@@ -44,21 +59,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(-30.3128, 22.6092, 0), Vector3(-30.3128, 25.5702, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_41d4g"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-30.3128, 22.6092, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aak3a"]
