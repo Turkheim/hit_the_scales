@@ -1,11 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://htv6gh4m8um5"]
+[gd_scene load_steps=12 format=3 uid="uid://htv6gh4m8um5"]
 
 [ext_resource type="PackedScene" uid="uid://dsv6qkriqoyy1" path="res://Assets/map.glb" id="1_pcij6"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="2_xlgte"]
-[ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="3_h5xmd"]
-[ext_resource type="PackedScene" uid="uid://dn7gfp8fjp7d1" path="res://Scene/Crossbow.tscn" id="4_m0cij"]
-[ext_resource type="PackedScene" uid="uid://bod6il00h1p35" path="res://Scene/Projecticle.tscn" id="4_ompxw"]
-[ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="5_1saam"]
+[ext_resource type="PackedScene" uid="uid://chxa5onwgnh1b" path="res://Scene/player_bow.tscn" id="5_85txm"]
 [ext_resource type="PackedScene" uid="uid://doyn3ck1c4coi" path="res://Scene/dragon.tscn" id="7_eq3cw"]
 [ext_resource type="Script" path="res://Scripts/pivot.gd" id="7_m25on"]
 
@@ -22,13 +19,6 @@ sky_material = SubResource("ProceduralSkyMaterial_8ksl2")
 background_mode = 2
 sky = SubResource("Sky_2tm3j")
 tonemap_mode = 2
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fwvik"]
-radius = 0.4
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rt4d5"]
-radius = 0.114687
-height = 0.901155
 
 [sub_resource type="Animation" id="Animation_41d4g"]
 length = 0.001
@@ -83,39 +73,6 @@ shadow_enabled = true
 [node name="Tower" parent="Map" instance=ExtResource("2_xlgte")]
 collision_layer = 3
 
-[node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.38492, 0)
-collision_layer = 2
-script = ExtResource("3_h5xmd")
-projectile = ExtResource("4_ompxw")
-
-[node name="Collision" type="CollisionShape3D" parent="Player"]
-shape = SubResource("CapsuleShape3D_fwvik")
-
-[node name="Head" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
-
-[node name="Camera" type="Camera3D" parent="Player/Head"]
-
-[node name="RayCast3D" type="RayCast3D" parent="Player/Head/Camera"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-hit_back_faces = false
-collide_with_bodies = false
-
-[node name="Crossbow" parent="Player/Head/Camera" instance=ExtResource("4_m0cij")]
-transform = Transform3D(0.993707, 0.0287846, 0.108245, -0.014077, 0.990846, -0.134257, -0.111119, 0.131889, 0.985017, 0.09, -0.114, -0.1)
-
-[node name="Arrow2" parent="Player/Head/Camera/Crossbow" instance=ExtResource("5_1saam")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, -0.85017)
-
-[node name="Marker3D" type="Marker3D" parent="Player/Head/Camera/Crossbow/Arrow2"]
-
-[node name="Cooldown" type="Timer" parent="Player"]
-
-[node name="CollisionShapecross" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(-0.0287846, 0.108245, -0.993707, -0.990846, -0.134258, 0.014077, -0.131889, 0.985017, 0.111119, 0.0311951, 0.159241, -0.483461)
-shape = SubResource("CapsuleShape3D_rt4d5")
-
 [node name="pivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
 script = ExtResource("7_m25on")
@@ -129,4 +86,13 @@ libraries = {
 }
 autoplay = "bobing"
 
-[connection signal="timeout" from="Player/Cooldown" to="Player" method="_on_cooldown_timeout"]
+[node name="PlayerBow" parent="." instance=ExtResource("5_85txm")]
+
+[node name="Skeleton3D" parent="PlayerBow/Head/Camera/Bow/Armature" index="0"]
+bones/1/position = Vector3(0.161526, -0.210479, -0.996705)
+bones/1/rotation = Quaternion(0.0529085, 0.0927138, -0.103432, 0.988892)
+bones/2/position = Vector3(0.467833, -0.822016, -1.00055)
+bones/2/rotation = Quaternion(-0.628138, 0.173688, -0.536305, 0.536332)
+
+[editable path="PlayerBow"]
+[editable path="PlayerBow/Head/Camera/Bow"]
