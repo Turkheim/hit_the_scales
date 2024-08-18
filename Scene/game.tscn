@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://htv6gh4m8um5"]
+
+[ext_resource type="PackedScene" uid="uid://dsv6qkriqoyy1" path="res://Assets/map.glb" id="1_pcij6"]
+[ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="2_xlgte"]
+[ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="3_h5xmd"]
+[ext_resource type="PackedScene" uid="uid://dn7gfp8fjp7d1" path="res://Scene/Crossbow.tscn" id="4_m0cij"]
+[ext_resource type="PackedScene" uid="uid://bod6il00h1p35" path="res://Scene/Projecticle.tscn" id="4_ompxw"]
+[ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="5_1saam"]
+[ext_resource type="PackedScene" uid="uid://doyn3ck1c4coi" path="res://Scene/dragon.tscn" id="7_eq3cw"]
+[ext_resource type="Script" path="res://Scripts/pivot.gd" id="7_m25on"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8ksl2"]
+sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
+sky_horizon_color = Color(0.697291, 0.755682, 0.830682, 1)
+ground_bottom_color = Color(0.223711, 0.438214, 0.405078, 1)
+ground_horizon_color = Color(0.697291, 0.755682, 0.830682, 1)
+
+[sub_resource type="Sky" id="Sky_2tm3j"]
+sky_material = SubResource("ProceduralSkyMaterial_8ksl2")
+
+[sub_resource type="Environment" id="Environment_3r3by"]
+background_mode = 2
+sky = SubResource("Sky_2tm3j")
+tonemap_mode = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fwvik"]
+radius = 0.4
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rt4d5"]
+radius = 0.114687
+height = 0.901155
+
+[node name="Game" type="Node3D"]
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="map" parent="Map" instance=ExtResource("1_pcij6")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Map"]
+environment = SubResource("Environment_3r3by")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
+transform = Transform3D(-0.5, 0.75, -0.433013, 0, 0.5, 0.866025, 0.866025, 0.433013, -0.25, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Tower" parent="Map" instance=ExtResource("2_xlgte")]
+collision_layer = 3
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.38492, 0)
+collision_layer = 2
+script = ExtResource("3_h5xmd")
+projectile = ExtResource("4_ompxw")
+
+[node name="Collision" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_fwvik")
+
+[node name="Head" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+
+[node name="Camera" type="Camera3D" parent="Player/Head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="Player/Head/Camera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+hit_back_faces = false
+collide_with_bodies = false
+
+[node name="Crossbow" parent="Player/Head/Camera" instance=ExtResource("4_m0cij")]
+transform = Transform3D(0.993707, 0.0287846, 0.108245, -0.014077, 0.990846, -0.134257, -0.111119, 0.131889, 0.985017, 0.09, -0.114, -0.1)
+
+[node name="Arrow2" parent="Player/Head/Camera/Crossbow" instance=ExtResource("5_1saam")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, -0.85017)
+
+[node name="Marker3D" type="Marker3D" parent="Player/Head/Camera/Crossbow/Arrow2"]
+
+[node name="Cooldown" type="Timer" parent="Player"]
+
+[node name="CollisionShapecross" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(-0.0287846, 0.108245, -0.993707, -0.990846, -0.134258, 0.014077, -0.131889, 0.985017, 0.111119, 0.0311951, 0.159241, -0.483461)
+shape = SubResource("CapsuleShape3D_rt4d5")
+
+[node name="pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
+script = ExtResource("7_m25on")
+
+[node name="Dragon" parent="pivot" instance=ExtResource("7_eq3cw")]
+transform = Transform3D(0.642788, 0.766044, -5.95772e-09, -0.766044, 0.642788, -4.52534e-08, -3.08366e-08, 3.36522e-08, 1, -30.3128, 22.6092, 0)
+
+[connection signal="timeout" from="Player/Cooldown" to="Player" method="_on_cooldown_timeout"]
