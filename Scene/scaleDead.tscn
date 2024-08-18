@@ -41,10 +41,11 @@ points = PackedVector3Array(1.2489, -0.138956, 0.690324, -0.962865, -0.24311, 1.
 
 [node name="ScaleDead" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.371805)
+mass = 5.0
 angular_velocity = Vector3(0.523599, 0.872665, 0.261799)
 script = ExtResource("1_46slh")
 
-[node name="Scale" type="MeshInstance3D" parent="."]
+[node name="ScaleDeadMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_i2leq")
 skeleton = NodePath("")
 
