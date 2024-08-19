@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b21jqkq3uy1xq"]
 
-[ext_resource type="Script" path="res://Scene/scaleDead.gd" id="1_46slh"]
+[ext_resource type="Script" path="res://Scripts/scaleDead.gd" id="1_46slh"]
 [ext_resource type="Material" uid="uid://div7ycob07tms" path="res://Assets/Yellow.tres" id="2_1p38i"]
 [ext_resource type="Material" uid="uid://d4gjn10na26tt" path="res://Assets/platinum.tres" id="2_8cxe1"]
 [ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="3_g4wvj"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0c8gfwyrctkq"]
 
-[ext_resource type="Script" path="res://Scene/scaleDead.gd" id="1_hjkou"]
+[ext_resource type="Script" path="res://Scripts/scaleDead.gd" id="1_hjkou"]
 [ext_resource type="Material" uid="uid://div7ycob07tms" path="res://Assets/Yellow.tres" id="2_dqd5g"]
 [ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="3_0k8oj"]
 

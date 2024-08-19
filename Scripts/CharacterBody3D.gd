@@ -4,7 +4,7 @@ extends CharacterBody3D
 @export var movement_speed = 5
 
 var canShoot = true
-var arrow_strength = 30
+@export var arrow_strength = 25
 
 var mouse_sensitivity = 700
 var gamepad_sensitivity := 0.075
