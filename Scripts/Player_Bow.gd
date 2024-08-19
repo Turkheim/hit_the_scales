@@ -4,6 +4,8 @@ extends CharacterBody3D
 @export var movement_speed = 5
 
 var canShoot = true
+var release = false
+var canRelease = false
 var arrow_strength = 30
 
 var mouse_sensitivity = 700
@@ -31,6 +33,7 @@ signal health_updated
 #@onready var sound_footsteps = $SoundFootsteps
 @onready var blaster_cooldown = $Cooldown
 #@export var crosshair:TextureRect
+@onready var animator : AnimationTree = $Head/Camera/Bow/AnimationPlayer/AnimationTree
 
 # Functions
 
@@ -134,13 +137,29 @@ func handle_gravity(delta):
 func action_shoot():
 	
 	if Input.is_action_pressed("shoot"):
+		release = false
 		if canShoot == true:
+			canShoot = false
+			animator["parameters/conditions/aPressed"] = true
+			animator["parameters/conditions/aRelease"] = false
+			$Charging.start()
 			#print("boom")
-			crearProyectil()
 			#$Fire.play()
-			canShoot =false
-			$Cooldown.start()
 			
+	if Input.is_action_just_released("shoot"):
+		release = true
+		
+	if release and canRelease:
+		release = false
+		canRelease = false
+		animator["parameters/conditions/aRelease"] = true
+		crearProyectil()
+		$Cooldown.start()
+		animator["parameters/conditions/aPressed"] = false
+		
+func _on_charging_timeout():
+	canRelease = true
+
 func _on_cooldown_timeout():
 	canShoot = true
 
@@ -152,8 +171,8 @@ func crearProyectil():
 	
 	#Movemos el proyectil al origen del disparo
 	
-	instance.transform = ($Head/Camera/Crossbow/Arrow2/Marker3D.global_transform)
+	instance.transform = ($Head/Camera/Bow/Armature/Skeleton3D/Arrow/Marker3D_Bow.global_transform)
 	
 	#Empujamos el proyectil con fuerza para adelante
-	instance.apply_central_impulse($Head/Camera/Crossbow/Arrow2/Marker3D.global_transform.basis.z * arrow_strength * -1)
+	instance.apply_central_impulse($Head/Camera/Bow/Armature/Skeleton3D/Arrow/Marker3D_Bow.global_transform.basis.z * arrow_strength * -1)
 

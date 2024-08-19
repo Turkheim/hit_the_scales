@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://g32fc7j8la3x"]
+[gd_scene load_steps=22 format=3 uid="uid://g32fc7j8la3x"]
 
 [ext_resource type="Texture2D" uid="uid://bi8tk4e2jd5a6" path="res://Assets/Bow_Untitled.png" id="1_kd7gi"]
 
@@ -197,9 +197,24 @@ tracks/4/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_dmdf8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D/bow:blend_shapes/Back")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_vb1n3"]
 resource_name = "Reload"
-length = 1.33333
+length = 1.50005
 step = 0.0333333
 tracks/0/type = "position_3d"
 tracks/0/imported = true
@@ -242,21 +257,6 @@ tracks/4/keys = {
 "values": [1.0, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_dmdf8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Armature/Skeleton3D/bow:blend_shapes/Back")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nqqd0"]
 _data = {
 "Charge": SubResource("Animation_yhywm"),
@@ -282,14 +282,12 @@ animation = &"Reload"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dvmqd"]
+switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l85kh"]
 advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7q6p8"]
-switch_mode = 2
-advance_mode = 2
+advance_condition = &"aRelease"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qf8al"]
 switch_mode = 2
@@ -297,22 +295,23 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m58p2"]
 advance_mode = 2
+advance_condition = &"aPressed"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7v7nk"]
 states/Charge/node = SubResource("AnimationNodeAnimation_l54qa")
-states/Charge/position = Vector2(499, 21)
+states/Charge/position = Vector2(668, 24)
 states/End/position = Vector2(1067, 100)
 states/Holding/node = SubResource("AnimationNodeAnimation_wowpo")
-states/Holding/position = Vector2(705, 21)
+states/Holding/position = Vector2(839, 100)
 states/Idle/node = SubResource("AnimationNodeAnimation_wxqfy")
-states/Idle/position = Vector2(341, 92)
+states/Idle/position = Vector2(487, 100)
 states/Reload/node = SubResource("AnimationNodeAnimation_gcupd")
-states/Reload/position = Vector2(735, 131)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_aef1x"), "Charge", "Holding", SubResource("AnimationNodeStateMachineTransition_dvmqd"), "Holding", "Reload", SubResource("AnimationNodeStateMachineTransition_l85kh"), "Charge", "Reload", SubResource("AnimationNodeStateMachineTransition_7q6p8"), "Reload", "Idle", SubResource("AnimationNodeStateMachineTransition_qf8al"), "Idle", "Charge", SubResource("AnimationNodeStateMachineTransition_m58p2")]
-graph_offset = Vector2(0, -33)
+states/Reload/position = Vector2(668, 207)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_aef1x"), "Charge", "Holding", SubResource("AnimationNodeStateMachineTransition_dvmqd"), "Holding", "Reload", SubResource("AnimationNodeStateMachineTransition_l85kh"), "Reload", "Idle", SubResource("AnimationNodeStateMachineTransition_qf8al"), "Idle", "Charge", SubResource("AnimationNodeStateMachineTransition_m58p2")]
+graph_offset = Vector2(-6, -13)
 
 [node name="Bow" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188666, 0, -0.738054)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, -0.15, -0.7)
 
 [node name="Armature" type="Node3D" parent="."]
 
@@ -328,20 +327,23 @@ bones/1/name = "Bow"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0808543, -0.229832, -1)
 bones/1/enabled = true
-bones/1/position = Vector3(0.159044, -0.157197, -0.994099)
-bones/1/rotation = Quaternion(0.101559, 0.0983965, -0.112508, 0.983537)
+bones/1/position = Vector3(0.166499, -0.146221, -0.991731)
+bones/1/rotation = Quaternion(0.12182, 0.115959, -0.0822743, 0.982316)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "Arrow"
 bones/2/parent = 0
 bones/2/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1.40905)
 bones/2/enabled = true
-bones/2/position = Vector3(0.345337, -0.027978, -0.710158)
-bones/2/rotation = Quaternion(-0.62365, 0.149129, -0.00997008, 0.767282)
+bones/2/position = Vector3(0.349485, -0.0133837, -0.687861)
+bones/2/rotation = Quaternion(-0.607938, 0.14704, 0.0168106, 0.780069)
 bones/2/scale = Vector3(1, 1, 1)
 
 [node name="Arrow" type="MeshInstance3D" parent="Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_uro45")
 skin = SubResource("Skin_eydd7")
+
+[node name="Marker3D_Bow" type="Marker3D" parent="Armature/Skeleton3D/Arrow"]
+transform = Transform3D(1, 9.31323e-09, 1.93715e-07, 0, 1, -2.98023e-08, -7.45058e-08, 2.23517e-08, 1, 0.186424, 0.100639, -0.0837131)
 
 [node name="bow" type="MeshInstance3D" parent="Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_okkt8")
@@ -357,3 +359,5 @@ libraries = {
 root_node = NodePath("../..")
 tree_root = SubResource("AnimationNodeStateMachine_7v7nk")
 anim_player = NodePath("..")
+parameters/conditions/aPressed = false
+parameters/conditions/aRelease = false

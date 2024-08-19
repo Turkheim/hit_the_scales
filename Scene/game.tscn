@@ -89,10 +89,20 @@ autoplay = "bobing"
 [node name="PlayerBow" parent="." instance=ExtResource("5_85txm")]
 
 [node name="Skeleton3D" parent="PlayerBow/Head/Camera/Bow/Armature" index="0"]
-bones/1/position = Vector3(0.161526, -0.210479, -0.996705)
-bones/1/rotation = Quaternion(0.0529085, 0.0927138, -0.103432, 0.988892)
-bones/2/position = Vector3(0.467833, -0.822016, -1.00055)
-bones/2/rotation = Quaternion(-0.628138, 0.173688, -0.536305, 0.536332)
+bones/1/position = Vector3(0.121681, -0.187903, -0.959495)
+bones/1/rotation = Quaternion(-0.00294083, -0.0331328, -0.392077, 0.919331)
+bones/2/position = Vector3(0.345881, -0.0893228, -1.0018)
+bones/2/rotation = Quaternion(-0.652214, 0.253733, -0.300794, 0.647888)
+
+[node name="Cooldown" parent="PlayerBow" index="2"]
+wait_time = 1.5
+one_shot = true
+
+[node name="Charging" type="Timer" parent="PlayerBow"]
+wait_time = 1.1
+one_shot = true
+
+[connection signal="timeout" from="PlayerBow/Charging" to="PlayerBow" method="_on_charging_timeout"]
 
 [editable path="PlayerBow"]
 [editable path="PlayerBow/Head/Camera/Bow"]
