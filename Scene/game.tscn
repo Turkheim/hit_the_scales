@@ -49,7 +49,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5, 3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-25, 25, 0), Vector3(-25, 30, 5), Vector3(-25, 25, 0)]
+"values": [Vector3(-30, 20, 0), Vector3(-25, 28, 5), Vector3(-30, 20, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aak3a"]
@@ -90,10 +90,10 @@ autoplay = "bobing"
 [node name="PlayerBow" parent="." instance=ExtResource("5_85txm")]
 
 [node name="Skeleton3D" parent="PlayerBow/Head/Camera/Bow/Armature" index="0"]
-bones/1/position = Vector3(0.128778, -0.22638, -0.963735)
-bones/1/rotation = Quaternion(-0.091116, -0.0608884, -0.391437, 0.913656)
-bones/2/position = Vector3(0.353266, -0.139048, -1.02718)
-bones/2/rotation = Quaternion(-0.710481, 0.233733, -0.319842, 0.581624)
+bones/1/position = Vector3(0.120565, -0.192686, -0.960204)
+bones/1/rotation = Quaternion(-0.034965, -0.0331393, -0.391333, 0.918987)
+bones/2/position = Vector3(0.34443, -0.0954732, -1.01458)
+bones/2/rotation = Quaternion(-0.674546, 0.253281, -0.300148, 0.625098)
 
 [node name="Cooldown" parent="PlayerBow" index="2"]
 wait_time = 1.5

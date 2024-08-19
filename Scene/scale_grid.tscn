@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://pbyrc3jvd26k"]
+
+[ext_resource type="PackedScene" uid="uid://cx3on3m8vnkdv" path="res://Scene/scale.tscn" id="1_w4ttn"]
+
+[node name="ScaleGrid" type="Node"]
+
+[node name="Scale" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(1, 0, 0, 0, 0.945449, -0.325769, 0, 0.325769, 0.94545, 0, 4.16271, 3.14245)
+
+[node name="Scale1" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(1, -0.000246798, 9.45517e-05, 0.000236016, 0.994912, 0.100751, -0.000118936, -0.100751, 0.994912, 0, 4.21859, -1.12888)
+
+[node name="Scale2" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.996907, -0.0290498, -0.0730217, 0.0460104, 0.969024, 0.242641, 0.0637112, -0.245251, 0.967364, -0.0174345, 2.59906, -4.28581)
+
+[node name="Scale3" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.683477, 0.72426, -0.0911418, -0.699567, 0.685543, 0.201586, 0.208482, -0.0740197, 0.975221, 0.994617, 3.30419, -2.42873)
+
+[node name="Scale4" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.545757, 0.7971, 0.258421, -0.829263, 0.469503, 0.303134, 0.120299, -0.379736, 0.91724, 1.53872, 1.6645, -4.17755)
+
+[node name="Scale5" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.827986, 0.55893, -0.0451275, -0.557403, 0.811598, -0.174959, -0.0611642, 0.170018, 0.983541, 1.09149, 4.09858, 1.11589)
+
+[node name="Scale6" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.809037, 0.549264, -0.209209, -0.586973, 0.773427, -0.239318, 0.030359, 0.316418, 0.948134, 1.07862, 3.69949, 4.60537)
+
+[node name="Scale7" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.422134, 0.897909, -0.124749, -0.903504, 0.40548, -0.138805, -0.0740515, 0.171306, 0.982431, 1.95719, 2.88689, -1.12128)
+
+[node name="Scale8" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.610295, 0.75816, -0.22964, -0.787989, 0.551244, -0.274233, -0.0813252, 0.348317, 0.933842, 1.94607, 3.04893, 2.84339)
+
+[node name="Scale9" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.429931, 0.81263, -0.393436, -0.898878, 0.426146, -0.102067, 0.0847185, 0.397532, 0.913669, 2.23659, 1.68973, 5.22585)
+
+[node name="Scale10" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.214229, 0.967758, -0.132481, -0.972803, 0.199153, -0.118292, -0.0880942, 0.154219, 0.984102, 2.36698, 0.736977, -1.99378)
+
+[node name="Scale11" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.199105, 0.959997, -0.196887, -0.969847, 0.164214, -0.180084, -0.140548, 0.226806, 0.963745, 2.81846, 0.458366, -0.0172328)
+
+[node name="Scale12" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.479391, 0.845053, -0.23679, -0.877503, 0.465591, -0.114947, 0.0131109, 0.262889, 0.964737, 2.55462, 2.31816, 0.846034)
+
+[node name="Scale13" parent="." instance=ExtResource("1_w4ttn")]
+transform = Transform3D(0.140856, 0.963997, -0.22554, -0.982941, 0.163383, 0.0844532, 0.118262, 0.209797, 0.970567, 3.17141, 0.829417, 2.74523)
