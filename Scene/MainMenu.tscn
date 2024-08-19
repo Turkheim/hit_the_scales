@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://cueluim58u4tw"]
+
+[ext_resource type="Script" path="res://Scene/Play.gd" id="1_6imf3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kk6uf"]
+sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
+sky_horizon_color = Color(0.697291, 0.755682, 0.830682, 1)
+ground_bottom_color = Color(0.223711, 0.438214, 0.405078, 1)
+ground_horizon_color = Color(0.697291, 0.755682, 0.830682, 1)
+
+[sub_resource type="Sky" id="Sky_ewj1l"]
+sky_material = SubResource("ProceduralSkyMaterial_kk6uf")
+
+[sub_resource type="Environment" id="Environment_jf8y5"]
+background_mode = 2
+sky = SubResource("Sky_ewj1l")
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_msyr3"]
+size = Vector3(1, 0.4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30aea"]
+size = Vector3(1, 0.4, 0.2)
+
+[node name="MainMenu" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jf8y5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.5, 0.75, -0.433013, 0, 0.5, 0.866025, 0.866025, 0.433013, -0.25, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Play" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_6imf3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Play"]
+mesh = SubResource("BoxMesh_msyr3")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Play/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Play/MeshInstance3D/Area3D"]
+shape = SubResource("BoxShape3D_30aea")
+
+[node name="Exit" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Exit"]
+mesh = SubResource("BoxMesh_msyr3")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Exit/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exit/MeshInstance3D/Area3D"]
+shape = SubResource("BoxShape3D_30aea")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.6245)
+
+[connection signal="input_event" from="Play/MeshInstance3D/Area3D" to="Play" method="_on_area_3d_input_event"]

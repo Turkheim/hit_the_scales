@@ -90,10 +90,10 @@ autoplay = "bobing"
 [node name="PlayerBow" parent="." instance=ExtResource("5_85txm")]
 
 [node name="Skeleton3D" parent="PlayerBow/Head/Camera/Bow/Armature" index="0"]
-bones/1/position = Vector3(0.120565, -0.192686, -0.960204)
-bones/1/rotation = Quaternion(-0.034965, -0.0331393, -0.391333, 0.918987)
-bones/2/position = Vector3(0.34443, -0.0954732, -1.01458)
-bones/2/rotation = Quaternion(-0.674546, 0.253281, -0.300148, 0.625098)
+bones/1/position = Vector3(0.124532, -0.216768, -0.962752)
+bones/1/rotation = Quaternion(-0.0779576, -0.0503442, -0.391372, 0.915542)
+bones/2/position = Vector3(0.348459, -0.126618, -1.02479)
+bones/2/rotation = Quaternion(-0.70251, 0.241143, -0.312341, 0.592261)
 
 [node name="Cooldown" parent="PlayerBow" index="2"]
 wait_time = 1.5
