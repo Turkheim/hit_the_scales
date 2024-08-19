@@ -1,14 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cueluim58u4tw"]
+[gd_scene load_steps=9 format=3 uid="uid://cr2lovto570wd"]
 
-[ext_resource type="Script" path="res://Scene/Play.gd" id="1_6imf3"]
-[ext_resource type="Script" path="res://Scene/Playbow.gd" id="2_4fer0"]
-[ext_resource type="Script" path="res://Scene/Exit.gd" id="3_egspu"]
+[ext_resource type="Script" path="res://Scene/Play.gd" id="1_3v2wp"]
+[ext_resource type="Script" path="res://Scene/Playbow.gd" id="2_bd578"]
+[ext_resource type="Script" path="res://Scene/Exit.gd" id="3_2t8mb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kk6uf"]
 sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
-sky_horizon_color = Color(0.697291, 0.755682, 0.830682, 1)
+sky_horizon_color = Color(0.873411, 0.700847, 0.693933, 1)
 ground_bottom_color = Color(0.223711, 0.438214, 0.405078, 1)
-ground_horizon_color = Color(0.697291, 0.755682, 0.830682, 1)
+ground_horizon_color = Color(0.512275, 0.809424, 0.82218, 1)
 
 [sub_resource type="Sky" id="Sky_ewj1l"]
 sky_material = SubResource("ProceduralSkyMaterial_kk6uf")
@@ -31,10 +31,11 @@ environment = SubResource("Environment_jf8y5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.5, 0.75, -0.433013, 0, 0.5, 0.866025, 0.866025, 0.433013, -0.25, 0, 0, 0)
+light_color = Color(1, 1, 0.415686, 1)
 shadow_enabled = true
 
 [node name="PlayCrossbow" type="Node3D" parent="."]
-script = ExtResource("1_6imf3")
+script = ExtResource("1_3v2wp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayCrossbow"]
 mesh = SubResource("BoxMesh_msyr3")
@@ -47,7 +48,7 @@ shape = SubResource("BoxShape3D_30aea")
 
 [node name="Playbow" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-script = ExtResource("2_4fer0")
+script = ExtResource("2_bd578")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Playbow"]
 mesh = SubResource("BoxMesh_msyr3")
@@ -60,7 +61,7 @@ shape = SubResource("BoxShape3D_30aea")
 
 [node name="Exit" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-script = ExtResource("3_egspu")
+script = ExtResource("3_2t8mb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Exit"]
 mesh = SubResource("BoxMesh_msyr3")
