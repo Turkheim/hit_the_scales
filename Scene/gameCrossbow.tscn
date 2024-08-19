@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://sflt4vjx1ur6"]
+[gd_scene load_steps=13 format=3 uid="uid://sflt4vjx1ur6"]
 
 [ext_resource type="PackedScene" uid="uid://dsv6qkriqoyy1" path="res://Assets/map.glb" id="1_2bprh"]
+[ext_resource type="Script" path="res://Scene/gameCrossbow.gd" id="1_eaquj"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="2_f5o8s"]
 [ext_resource type="Script" path="res://Scripts/pivot.gd" id="3_spugq"]
 [ext_resource type="PackedScene" uid="uid://doyn3ck1c4coi" path="res://Scene/dragon.tscn" id="4_7y5ga"]
@@ -59,6 +60,7 @@ _data = {
 }
 
 [node name="Game" type="Node3D"]
+script = ExtResource("1_eaquj")
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -77,6 +79,7 @@ collision_layer = 3
 [node name="pivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
 script = ExtResource("3_spugq")
+dragon_speed = 18
 
 [node name="Dragon" parent="pivot" instance=ExtResource("4_7y5ga")]
 transform = Transform3D(0.642788, 0.766044, -5.95772e-09, -0.766044, 0.642788, -4.52534e-08, -3.08366e-08, 3.36522e-08, 1, -25, 25, 0)
@@ -88,3 +91,9 @@ libraries = {
 autoplay = "bobing"
 
 [node name="PlayerCrossbow" parent="." instance=ExtResource("5_wqq3s")]
+
+[node name="VillageTimer" type="Timer" parent="."]
+wait_time = 9.0
+one_shot = true
+
+[connection signal="timeout" from="VillageTimer" to="." method="_on_village_timer_timeout"]

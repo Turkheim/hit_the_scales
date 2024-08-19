@@ -24,7 +24,7 @@ var previously_floored := false
 
 var tween:Tween
 
-signal health_updated
+
 @export var projectile = load("res://Scene/Projecticle.tscn")
 
 @onready var camera = $Head/Camera

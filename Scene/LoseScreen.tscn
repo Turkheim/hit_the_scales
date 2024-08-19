@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dah7np43e1jfn"]
+[gd_scene load_steps=10 format=3 uid="uid://dah7np43e1jfn"]
 
+[ext_resource type="Script" path="res://Scene/LoseScreen.gd" id="1_cjoe2"]
 [ext_resource type="Script" path="res://Scene/Play.gd" id="1_ykgnc"]
 [ext_resource type="Script" path="res://Scene/Playbow.gd" id="2_siprd"]
 [ext_resource type="Script" path="res://Scene/Exit.gd" id="3_bml1t"]
@@ -26,6 +27,7 @@ size = Vector3(1, 0.4, 0.2)
 size = Vector3(1, 0.4, 0.2)
 
 [node name="MainMenu" type="Node3D"]
+script = ExtResource("1_cjoe2")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jf8y5")
