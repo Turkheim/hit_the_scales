@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://chxa5onwgnh1b"]
+[gd_scene load_steps=5 format=3 uid="uid://chxa5onwgnh1b"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Bow.gd" id="1_7xutm"]
-[ext_resource type="PackedScene" uid="uid://dn7gfp8fjp7d1" path="res://Scene/Crossbow.tscn" id="3_5wtn5"]
-[ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="4_pksj0"]
 [ext_resource type="PackedScene" uid="uid://g32fc7j8la3x" path="res://Scene/Bow.tscn" id="5_y7yt8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fwvik"]
@@ -14,7 +12,8 @@ height = 0.901155
 
 [node name="PlayerBow" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.38492, 0)
-collision_layer = 2
+collision_layer = 0
+collision_mask = 8
 script = ExtResource("1_7xutm")
 
 [node name="Collision" type="CollisionShape3D" parent="."]
@@ -30,24 +29,16 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 hit_back_faces = false
 collide_with_bodies = false
 
-[node name="Crossbow" parent="Head/Camera" instance=ExtResource("3_5wtn5")]
-transform = Transform3D(0.993707, 0.0287846, 0.108245, -0.014077, 0.990846, -0.134257, -0.111119, 0.131889, 0.985017, 0.09, -0.114, -0.1)
-visible = false
-
-[node name="Arrow2" parent="Head/Camera/Crossbow" instance=ExtResource("4_pksj0")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, -0.85017)
-
-[node name="Marker3D" type="Marker3D" parent="Head/Camera/Crossbow/Arrow2"]
-
 [node name="Bow" parent="Head/Camera" instance=ExtResource("5_y7yt8")]
 
 [node name="Skeleton3D" parent="Head/Camera/Bow/Armature" index="0"]
-bones/1/position = Vector3(0.145314, -0.193663, -0.959341)
-bones/1/rotation = Quaternion(0.0227926, -0.0696035, -0.400161, 0.913513)
-bones/2/position = Vector3(0.374315, -0.0973248, -0.980029)
-bones/2/rotation = Quaternion(-0.629835, 0.23374, -0.332174, 0.662068)
+bones/1/position = Vector3(0.145269, -0.207052, -0.96013)
+bones/1/rotation = Quaternion(0.00305724, -0.0724611, -0.399592, 0.913819)
+bones/2/position = Vector3(0.374049, -0.114572, -0.987414)
+bones/2/rotation = Quaternion(-0.644006, 0.231317, -0.333792, 0.64833)
 
 [node name="Cooldown" type="Timer" parent="."]
+wait_time = 1.5
 
 [node name="Charging" type="Timer" parent="."]
 wait_time = 1.1

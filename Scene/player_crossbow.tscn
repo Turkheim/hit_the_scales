@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bod6il00h1p35" path="res://Scene/Projecticle.tscn" id="2_rhdeo"]
 [ext_resource type="PackedScene" uid="uid://dn7gfp8fjp7d1" path="res://Scene/Crossbow.tscn" id="3_q0so1"]
 [ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="4_ms1yp"]
-[ext_resource type="Material" uid="uid://bhp8ftsbiq350" path="res://Assets/Brown.tres" id="5_8upgy"]
+[ext_resource type="Material" path="res://Assets/Brown.tres" id="5_8upgy"]
 [ext_resource type="AudioStream" uid="uid://8a2gncicsopj" path="res://Assets/Sounds-20240820T143812Z-001/Sounds/ArrowLoad.wav" id="5_e3cvk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fwvik"]
@@ -16,7 +16,8 @@ height = 0.901155
 
 [node name="PlayerCrossbow" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.38492, 0)
-collision_layer = 2
+collision_layer = 0
+collision_mask = 8
 script = ExtResource("1_wvtrg")
 projectile = ExtResource("2_rhdeo")
 

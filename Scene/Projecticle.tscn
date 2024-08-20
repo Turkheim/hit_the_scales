@@ -48,8 +48,8 @@ radius = 0.0865541
 height = 0.71459
 
 [sub_resource type="Curve" id="Curve_ftvmc"]
-_data = [Vector2(0, 1), 0.0, -2.2204, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 1), 0.0, -2.2204, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Curve" id="Curve_8a3p0"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -66,6 +66,7 @@ curve_z = SubResource("Curve_hrhfb")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_45jmx"]
 gravity = Vector3(0, 0, 0)
+scale_max = 2.15
 scale_curve = SubResource("CurveXYZTexture_a4s5y")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvut8"]
@@ -96,7 +97,7 @@ shape = SubResource("CapsuleShape3D_phm4s")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -5.43998e-08, 1.24452)
-amount = 100
+amount = 20
 lifetime = 0.5
 trail_lifetime = 0.6
 process_material = SubResource("ParticleProcessMaterial_45jmx")

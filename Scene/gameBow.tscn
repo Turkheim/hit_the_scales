@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtox7gk5rw13d"]
+[gd_scene load_steps=15 format=3 uid="uid://dtox7gk5rw13d"]
 
 [ext_resource type="Script" path="res://Scene/gameCrossbow.gd" id="1_yfyfs"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="2_sm4yl"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://d2ngftqngo7im" path="res://Assets/Sounds-20240820T143812Z-001/Sounds/LevelSong.wav" id="6_nsb57"]
 [ext_resource type="PackedScene" uid="uid://chxa5onwgnh1b" path="res://Scene/player_bow.tscn" id="7_pfmni"]
 [ext_resource type="PackedScene" uid="uid://ddcitcw8wwtqs" path="res://Scene/TestMap.tscn" id="7_y1xs8"]
+[ext_resource type="PackedScene" uid="uid://bin1d5aq72b47" path="res://Scene/map_bloking.tscn" id="8_gldg5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8ksl2"]
 sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
@@ -73,7 +74,8 @@ transform = Transform3D(-0.5, 0.75, -0.433013, 0, 0.5, 0.866025, 0.866025, 0.433
 shadow_enabled = true
 
 [node name="Tower" parent="Map" instance=ExtResource("2_sm4yl")]
-collision_layer = 3
+collision_layer = 11
+collision_mask = 0
 
 [node name="pivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
@@ -98,7 +100,10 @@ stream = ExtResource("6_nsb57")
 autoplay = true
 
 [node name="map" parent="." instance=ExtResource("7_y1xs8")]
+visible = false
 
 [node name="PlayerBow" parent="." instance=ExtResource("7_pfmni")]
+
+[node name="map_Bloking" parent="." instance=ExtResource("8_gldg5")]
 
 [connection signal="timeout" from="VillageTimer" to="." method="_on_village_timer_timeout"]
