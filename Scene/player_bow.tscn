@@ -42,17 +42,22 @@ transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 
 [node name="Bow" parent="Head/Camera" instance=ExtResource("5_y7yt8")]
 
 [node name="Skeleton3D" parent="Head/Camera/Bow/Armature" index="0"]
-bones/1/position = Vector3(0.20689, -0.748793, -1.01852)
-bones/1/rotation = Quaternion(-0.0696405, -0.225533, -0.485815, 0.841587)
-bones/2/position = Vector3(0.449387, -0.71057, -1.00492)
-bones/2/rotation = Quaternion(-0.64431, 0.184031, -0.503052, 0.545835)
+bones/1/position = Vector3(0.145314, -0.193663, -0.959341)
+bones/1/rotation = Quaternion(0.0227926, -0.0696035, -0.400161, 0.913513)
+bones/2/position = Vector3(0.374315, -0.0973248, -0.980029)
+bones/2/rotation = Quaternion(-0.629835, 0.23374, -0.332174, 0.662068)
 
 [node name="Cooldown" type="Timer" parent="."]
+
+[node name="Charging" type="Timer" parent="."]
+wait_time = 1.1
+one_shot = true
 
 [node name="CollisionShapecross" type="CollisionShape3D" parent="."]
 transform = Transform3D(-0.0287846, 0.108245, -0.993707, -0.990846, -0.134258, 0.014077, -0.131889, 0.985017, 0.111119, 0.0311951, 0.159241, -0.483461)
 shape = SubResource("CapsuleShape3D_rt4d5")
 
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Charging" to="." method="_on_charging_timeout"]
 
 [editable path="Head/Camera/Bow"]

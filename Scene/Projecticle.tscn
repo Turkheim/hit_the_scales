@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bod6il00h1p35"]
+[gd_scene load_steps=15 format=3 uid="uid://bod6il00h1p35"]
 
 [ext_resource type="Script" path="res://Scene/Projecticle.gd" id="1_dyvik"]
 [ext_resource type="Texture2D" uid="uid://cd3nkvabevkps" path="res://Assets/Arrow_Untitled.png" id="1_wg3c1"]
+[ext_resource type="AudioStream" uid="uid://b7w4d0a6vmv6w" path="res://Assets/Sounds-20240820T143812Z-001/Sounds/ArrowLose.wav" id="3_22364"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7mmh"]
 resource_name = "Weapons"
@@ -105,5 +106,9 @@ draw_pass_1 = SubResource("RibbonTrailMesh_i83fg")
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="ArrowSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_22364")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

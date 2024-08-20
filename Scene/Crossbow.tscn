@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dn7gfp8fjp7d1"]
+[gd_scene load_steps=5 format=3 uid="uid://dn7gfp8fjp7d1"]
 
+[ext_resource type="Material" uid="uid://bhp8ftsbiq350" path="res://Assets/Brown.tres" id="1_ftges"]
 [ext_resource type="Texture2D" uid="uid://40enabpcrkwk" path="res://Assets/Crossbow_Untitled.png" id="1_hhk2j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7sjf6"]
@@ -30,6 +31,7 @@ blend_shape_mode = 0
 [node name="Crossbow" type="Node3D"]
 
 [node name="crossbow" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ftges")
 mesh = SubResource("ArrayMesh_wd4v2")
 skeleton = NodePath("")
 "blend_shapes/Key 1" = 0.0

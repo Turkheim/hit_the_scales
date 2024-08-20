@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cueluim58u4tw"]
+[gd_scene load_steps=21 format=3 uid="uid://cueluim58u4tw"]
 
 [ext_resource type="Script" path="res://Scene/Play.gd" id="1_6imf3"]
 [ext_resource type="Script" path="res://Scene/Playbow.gd" id="2_4fer0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cy20b624ew63i" path="res://Assets/Menu_Untitled.png" id="5_fga6n"]
 [ext_resource type="Material" uid="uid://ca3ail0357o8p" path="res://Assets/Tower.tres" id="6_f0jyk"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="6_jpq5p"]
+[ext_resource type="AudioStream" uid="uid://15e7bcxit148" path="res://Assets/Sounds-20240820T143812Z-001/Sounds/Menu.wav" id="7_pcj4b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kk6uf"]
 sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
@@ -168,6 +169,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0479174, 0.0310607, 0)
 material_override = ExtResource("6_f0jyk")
 mesh = SubResource("ArrayMesh_os1yq")
 skeleton = NodePath("")
+
+[node name="Menu" type="AudioStreamPlayer3D" parent="Menu/Floor"]
+stream = ExtResource("7_pcj4b")
+autoplay = true
 
 [node name="map" parent="." instance=ExtResource("5_5hqec")]
 

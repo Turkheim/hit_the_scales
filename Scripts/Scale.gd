@@ -20,7 +20,7 @@ func _on_area_3d_body_entered(body):
 	#var material = $ScaleMesh.mesh.surface_get_material(0)
 	#timer.start()
 	body.queue_free()
-	
+	$ScaleSound.play()
 	lives = lives +1
 	
 

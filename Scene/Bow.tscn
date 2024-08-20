@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://g32fc7j8la3x"]
+[gd_scene load_steps=23 format=3 uid="uid://g32fc7j8la3x"]
 
 [ext_resource type="Texture2D" uid="uid://bi8tk4e2jd5a6" path="res://Assets/Bow_Untitled.png" id="1_kd7gi"]
+[ext_resource type="Material" uid="uid://bhp8ftsbiq350" path="res://Assets/Brown.tres" id="1_q5oc0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sm7p0"]
 resource_name = "Weapons"
@@ -327,18 +328,19 @@ bones/1/name = "Bow"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0808543, -0.229832, -1)
 bones/1/enabled = true
-bones/1/position = Vector3(0.166499, -0.146221, -0.991731)
-bones/1/rotation = Quaternion(0.12182, 0.115959, -0.0822743, 0.982316)
+bones/1/position = Vector3(0.120317, -0.190328, -0.959933)
+bones/1/rotation = Quaternion(-0.028247, -0.031648, -0.391322, 0.919275)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "Arrow"
 bones/2/parent = 0
 bones/2/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1.40905)
 bones/2/enabled = true
-bones/2/position = Vector3(0.349485, -0.0133837, -0.687861)
-bones/2/rotation = Quaternion(-0.607938, 0.14704, 0.0168106, 0.780069)
+bones/2/position = Vector3(0.344204, -0.0924244, -1.01252)
+bones/2/rotation = Quaternion(-0.669999, 0.254328, -0.299086, 0.630053)
 bones/2/scale = Vector3(1, 1, 1)
 
 [node name="Arrow" type="MeshInstance3D" parent="Armature/Skeleton3D"]
+material_override = ExtResource("1_q5oc0")
 mesh = SubResource("ArrayMesh_uro45")
 skin = SubResource("Skin_eydd7")
 
@@ -346,6 +348,7 @@ skin = SubResource("Skin_eydd7")
 transform = Transform3D(1, 9.31323e-09, 1.93715e-07, 0, 1, -2.98023e-08, -7.45058e-08, 2.23517e-08, 1, 0.186424, 0.100639, -0.0837131)
 
 [node name="bow" type="MeshInstance3D" parent="Armature/Skeleton3D"]
+material_override = ExtResource("1_q5oc0")
 mesh = SubResource("ArrayMesh_okkt8")
 skin = SubResource("Skin_eydd7")
 blend_shapes/Back = 0.0

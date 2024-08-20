@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7p48mla05x7i"]
+[gd_scene load_steps=3 format=3 uid="uid://c7p48mla05x7i"]
 
 [ext_resource type="PackedScene" uid="uid://6ykcvp8t3qdk" path="res://Assets/Tree.glb" id="1_5hxlp"]
-[ext_resource type="Texture2D" uid="uid://1dfuc5usqltu" path="res://Bow_Untitled.png" id="2_0yng4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtqtn"]
-albedo_texture = ExtResource("2_0yng4")
+albedo_color = Color(1.86507e-07, 0.277685, 2.64719e-07, 1)
 
 [node name="Tree2" instance=ExtResource("1_5hxlp")]
 
