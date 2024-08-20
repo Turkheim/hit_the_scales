@@ -316,19 +316,22 @@ transform = Transform3D(0.670117, 0, 1.34199, 0, 1.10581, 0, -1.34199, 0, 0.6701
 transform = Transform3D(0.491419, 0, 0.984128, 0, 1.5, 0, -0.984128, 0, 0.491419, 83.6254, 15.8076, -72.9888)
 
 [node name="Tree6" parent="Biome/Biome 1" index="5" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(0.901442, 0, -0.630399, 0, 1.5, 0, 0.630399, 0, 0.901442, 3.34669, -5.00333, -91.9496)
+transform = Transform3D(0.901442, 0, -0.630399, 0, 1.5, 0, 0.630399, 0, 0.901442, 14.4159, -1.70425, -109.791)
 
 [node name="Tree7" parent="Biome/Biome 1" index="6" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(-0.691133, 0, 0.855766, 0, 1.36876, 0, -0.855766, 0, -0.691133, 3.82041, -1.17573, -42.7615)
+transform = Transform3D(-0.691133, 0, 0.855766, 0, 1.36876, 0, -0.855766, 0, -0.691133, 0.0385141, 0.508155, -28.6532)
 
-[node name="House2" type="MeshInstance3D" parent="Biome/Biome 1" index="7"]
+[node name="Tree8" parent="Biome/Biome 1" index="7" instance=ExtResource("2_5kd8x")]
+transform = Transform3D(-0.322086, 0, -1.05179, 0, 1.36876, 0, 1.05179, 0, -0.322086, 10.9023, -3.61762, -66.2504)
+
+[node name="House2" type="MeshInstance3D" parent="Biome/Biome 1" index="8"]
 transform = Transform3D(9.67349, 0, -12.2966, 0, 12, 0, 7.10095, 0, 16.7514, 28.4264, 4.76442, -41.0713)
 visible = false
 material_override = ExtResource("4_u74qd")
 mesh = SubResource("BoxMesh_xriut")
 skeleton = NodePath("")
 
-[node name="WindMill" type="MeshInstance3D" parent="Biome/Biome 1" index="8"]
+[node name="WindMill" type="MeshInstance3D" parent="Biome/Biome 1" index="9"]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 54.3004, 16.4655, -64.0763)
 visible = false
 material_override = ExtResource("4_u74qd")
@@ -359,12 +362,15 @@ transform = Transform3D(-1.08493, 0, -0.512773, 0, 1.52119, 0, 0.512773, 0, -1.0
 transform = Transform3D(0.502335, 0, 1.0898, 0, 1.07207, 0, -1.0898, 0, 0.502335, 129.584, 15.9397, -26.2801)
 
 [node name="Tree9" parent="Biome/Biome 2" index="7" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(0.502335, 0, 1.0898, 0, 1.07207, 0, -1.0898, 0, 0.502335, 58.4317, -1.93317, -25.6346)
+transform = Transform3D(0.502335, 0, 1.0898, 0, 1.07207, 0, -1.0898, 0, 0.502335, 53.1524, -2.74869, -23.4275)
 
-[node name="Tree6" parent="Biome/Biome 2" index="8" instance=ExtResource("2_5kd8x")]
+[node name="Tree10" parent="Biome/Biome 2" index="8" instance=ExtResource("2_5kd8x")]
+transform = Transform3D(0.502335, 0, 1.0898, 0, 1.07207, 0, -1.0898, 0, 0.502335, 77.4949, 7.10336, -39.7578)
+
+[node name="Tree6" parent="Biome/Biome 2" index="9" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.586057, 0, 1.27143, 0, 1.1, 0, -1.27143, 0, 0.586057, 140.494, 14.6896, -9.15613)
 
-[node name="House2" type="MeshInstance3D" parent="Biome/Biome 2" index="9"]
+[node name="House2" type="MeshInstance3D" parent="Biome/Biome 2" index="10"]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 75.4492, -5.67049, 9.93595)
 visible = false
 material_override = ExtResource("4_u74qd")
@@ -413,27 +419,30 @@ transform = Transform3D(-0.498533, 0, 0.866871, 0, 0.844902, 0, -0.866871, 0, -0
 transform = Transform3D(0.371979, 0, 1.0352, 0, 1, 0, -1.0352, 0, 0.371979, -97.7252, 4.93183, 90.3951)
 
 [node name="Tree8" parent="Biome/Biome 4" index="2" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(0.206687, 0, -1.08041, 0, 1, 0, 1.08041, 0, 0.206687, -7.84315, -10.8553, 84.0262)
+transform = Transform3D(0.206687, 0, -1.08041, 0, 1, 0, 1.08041, 0, 0.206687, -7.84315, -11.2619, 60.8696)
 
-[node name="Tree3" parent="Biome/Biome 4" index="3" instance=ExtResource("2_5kd8x")]
+[node name="Tree10" parent="Biome/Biome 4" index="3" instance=ExtResource("2_5kd8x")]
+transform = Transform3D(1.09981, 0, 0.0207157, 0, 1, 0, -0.0207157, 0, 1.09981, -16.1206, -0.813491, 104.278)
+
+[node name="Tree3" parent="Biome/Biome 4" index="4" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(-0.75873, 0, -0.253632, 0, 1, 0, 0.253632, 0, -0.75873, -51.9305, 12.4157, 126.465)
 
-[node name="Tree4" parent="Biome/Biome 4" index="4" instance=ExtResource("2_5kd8x")]
+[node name="Tree4" parent="Biome/Biome 4" index="5" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.0524618, 0, 0.798278, 0, 0.902857, 0, -0.798278, 0, 0.0524618, -68.1515, 19.7379, 119.357)
 
-[node name="Tree9" parent="Biome/Biome 4" index="5" instance=ExtResource("2_5kd8x")]
+[node name="Tree9" parent="Biome/Biome 4" index="6" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(-0.68084, 0, 0.420068, 0, 0.902857, 0, -0.420068, 0, -0.68084, -2.3604, -0.00845182, 24.8915)
 
-[node name="Tree5" parent="Biome/Biome 4" index="6" instance=ExtResource("2_5kd8x")]
+[node name="Tree5" parent="Biome/Biome 4" index="7" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.874532, 0, -0.667228, 0, 1.1, 0, 0.667228, 0, 0.874532, -56.3975, 16.5057, 112.643)
 
-[node name="Tree6" parent="Biome/Biome 4" index="7" instance=ExtResource("2_5kd8x")]
+[node name="Tree6" parent="Biome/Biome 4" index="8" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.371979, 0, 1.0352, 0, 1, 0, -1.0352, 0, 0.371979, -79.2616, 16.677, 108.443)
 
-[node name="Tree7" parent="Biome/Biome 4" index="8" instance=ExtResource("2_5kd8x")]
+[node name="Tree7" parent="Biome/Biome 4" index="9" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.371979, 0, 1.0352, 0, 1.4, 0, -1.0352, 0, 0.371979, -63.1628, 15.7588, 98.3941)
 
-[node name="WindMill2" type="MeshInstance3D" parent="Biome/Biome 4" index="9"]
+[node name="WindMill2" type="MeshInstance3D" parent="Biome/Biome 4" index="10"]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -54.8493, 33.0583, 75.7694)
 visible = false
 material_override = ExtResource("4_u74qd")
@@ -446,7 +455,7 @@ skeleton = NodePath("")
 transform = Transform3D(-1.07113, 0, 0.250345, 0, 1.2, 0, -0.250345, 0, -1.07113, -132.85, 9.93949, 54.3967)
 
 [node name="Tree8" parent="Biome/Biome 5" index="1" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(-0.106996, 0, 1.09478, 0, 1.2, 0, -1.09478, 0, -0.106996, -82.8242, -0.429142, 34.5496)
+transform = Transform3D(-0.106996, 0, 1.09478, 0, 1.2, 0, -1.09478, 0, -0.106996, -104.406, 4.33936, 37.5062)
 
 [node name="Tree2" parent="Biome/Biome 5" index="2" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.965711, 0, 0.712322, 0, 1.1, 0, -0.712322, 0, 0.965711, -132.786, 4.04403, -55.7397)
@@ -455,18 +464,21 @@ transform = Transform3D(0.965711, 0, 0.712322, 0, 1.1, 0, -0.712322, 0, 0.965711
 transform = Transform3D(-1.26589, 0, 0.295862, 0, 1, 0, -0.295862, 0, -1.26589, -130.525, 0.232686, -34.8568)
 
 [node name="Tree7" parent="Biome/Biome 5" index="4" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(-0.192197, 0, -1.28572, 0, 1, 0, 1.28572, 0, -0.192197, -49.3018, -3.54572, 19.1908)
+transform = Transform3D(-0.192197, 0, -1.28572, 0, 1, 0, 1.28572, 0, -0.192197, -33.9248, -0.945267, 20.3411)
 
-[node name="Tree4" parent="Biome/Biome 5" index="5" instance=ExtResource("2_5kd8x")]
+[node name="Tree9" parent="Biome/Biome 5" index="5" instance=ExtResource("2_5kd8x")]
+transform = Transform3D(-0.192197, 0, -1.28572, 0, 1, 0, 1.28572, 0, -0.192197, -69.182, -1.52689, 31.7154)
+
+[node name="Tree4" parent="Biome/Biome 5" index="6" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(-0.0164978, 0, -1.14988, 0, 0.9, 0, 1.14988, 0, -0.0164978, -114.974, 0.232686, -40.1429)
 
-[node name="Tree5" parent="Biome/Biome 5" index="6" instance=ExtResource("2_5kd8x")]
+[node name="Tree5" parent="Biome/Biome 5" index="7" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(1.23381, 0, 0.853058, 0, 1.5, 0, -0.853058, 0, 1.23381, -126.251, 9.34552, 39.2277)
 
-[node name="Tree6" parent="Biome/Biome 5" index="7" instance=ExtResource("2_5kd8x")]
+[node name="Tree6" parent="Biome/Biome 5" index="8" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.650261, 0, -1.00854, 0, 1.1, 0, 1.00854, 0, 0.650261, -137.879, 9.77585, 18.7418)
 
-[node name="House" type="MeshInstance3D" parent="Biome/Biome 5" index="8"]
+[node name="House" type="MeshInstance3D" parent="Biome/Biome 5" index="9"]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -78.5367, 1.63883, 1.18075)
 visible = false
 material_override = ExtResource("4_u74qd")
@@ -482,7 +494,7 @@ transform = Transform3D(-0.546848, 0, 0.628368, 0, 1, 0, -0.628368, 0, -0.546848
 transform = Transform3D(0.618134, 0, 0.786073, 0, 0.9, 0, -0.786073, 0, 0.618134, -12.8899, 2.63062, -139.924)
 
 [node name="Tree9" parent="Biome/Biome 6" index="2" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(-0.673129, 0, 0.739525, 0, 0.9, 0, -0.739525, 0, -0.673129, -42.2427, -3.91504, -29.8413)
+transform = Transform3D(-0.673129, 0, 0.739525, 0, 0.9, 0, -0.739525, 0, -0.673129, -26.2035, -1.34717, -17.9042)
 
 [node name="Tree3" parent="Biome/Biome 6" index="3" instance=ExtResource("2_5kd8x")]
 transform = Transform3D(0.886018, 0, -0.463652, 0, 1.2, 0, 0.463652, 0, 0.886018, -108.02, 10.4317, -90.9688)
@@ -503,9 +515,12 @@ transform = Transform3D(-0.836334, 0, 0.332485, 0, 0.75, 0, -0.332485, 0, -0.836
 transform = Transform3D(-0.196097, 0, 1.18387, 0, 1.1, 0, -1.18387, 0, -0.196097, -52.1937, -1.85541, -111.692)
 
 [node name="Tree10" parent="Biome/Biome 6" index="9" instance=ExtResource("2_5kd8x")]
-transform = Transform3D(1.19941, 0, -0.0377742, 0, 1.1, 0, 0.0377742, 0, 1.19941, -78.6663, -0.832254, -53.4416)
+transform = Transform3D(1.19941, 0, -0.0377742, 0, 1.1, 0, 0.0377742, 0, 1.19941, -88.3769, 3.22354, -72.0237)
 
-[node name="Barn" type="MeshInstance3D" parent="Biome/Biome 6" index="10"]
+[node name="Tree11" parent="Biome/Biome 6" index="10" instance=ExtResource("2_5kd8x")]
+transform = Transform3D(-0.418402, 0, -1.1247, 0, 1.1, 0, 1.1247, 0, -0.418402, -57.5342, -4.81038, -48.1034)
+
+[node name="Barn" type="MeshInstance3D" parent="Biome/Biome 6" index="11"]
 transform = Transform3D(11.3003, 0, -17.0938, 0, 7.85268, 0, 16.3478, 0, 11.816, -32.7937, -3.24443, -85.9523)
 visible = false
 material_override = ExtResource("4_u74qd")
@@ -616,7 +631,7 @@ mesh = SubResource("ArrayMesh_pog4w")
 skeleton = NodePath("")
 
 [node name="Village_002" type="MeshInstance3D" parent="Village2" index="1"]
-transform = Transform3D(0.799999, 0, 0.600001, 0, 1, 0, -0.600001, 0, 0.799999, -56.1484, 6.26848, 64.0081)
+transform = Transform3D(0.799999, 0, 0.600001, 0, 1, 0, -0.600001, 0, 0.799999, -56.1484, 6.08429, 64.0081)
 mesh = SubResource("ArrayMesh_ajewj")
 skeleton = NodePath("")
 

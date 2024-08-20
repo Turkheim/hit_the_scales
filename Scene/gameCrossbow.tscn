@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://sflt4vjx1ur6"]
+[gd_scene load_steps=17 format=3 uid="uid://sflt4vjx1ur6"]
 
 [ext_resource type="Script" path="res://Scene/gameCrossbow.gd" id="1_eaquj"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="2_f5o8s"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://ddcitcw8wwtqs" path="res://Scene/TestMap.tscn" id="7_4p151"]
 [ext_resource type="AudioStream" uid="uid://d2ngftqngo7im" path="res://Assets/Sounds-20240820T143812Z-001/Sounds/LevelSong.wav" id="7_fdgg1"]
 [ext_resource type="PackedScene" uid="uid://bin1d5aq72b47" path="res://Scene/map_bloking.tscn" id="8_vy76e"]
+[ext_resource type="PackedScene" uid="uid://wvei2d2d2r7w" path="res://Scene/Explotion_Particles.tscn" id="9_g4jbn"]
+[ext_resource type="PackedScene" uid="uid://besmhtseuiucy" path="res://Fire.tscn" id="10_qd48l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8ksl2"]
 sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
@@ -105,5 +107,115 @@ autoplay = true
 visible = false
 
 [node name="map_Bloking" parent="." instance=ExtResource("8_vy76e")]
+
+[node name="Vfxs" type="Node" parent="."]
+
+[node name="Vfx1" type="Node" parent="Vfxs"]
+process_mode = 4
+
+[node name="Debris" parent="Vfxs/Vfx1" instance=ExtResource("9_g4jbn")]
+transform = Transform3D(3.86206e-08, 0.883537, 0.468362, 1, -4.37114e-08, 0, 2.04727e-08, 0.468362, -0.883537, 50.2191, 7.23047, -60.2287)
+emitting = true
+
+[node name="Fire" parent="Vfxs/Vfx1" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 53.1903, 16.2356, -61.9742)
+
+[node name="Fire2" parent="Vfxs/Vfx1" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 51.9985, 6.79129, -61.7941)
+
+[node name="Fire3" parent="Vfxs/Vfx1" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 47.268, 3.77778, -50.5714)
+
+[node name="Fire4" parent="Vfxs/Vfx1" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 30.4812, 5.79904, -36.627)
+
+[node name="Fire5" parent="Vfxs/Vfx1" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 27.868, -1.07939, -35.9152)
+
+[node name="Vfx2" type="Node" parent="Vfxs"]
+process_mode = 4
+
+[node name="Debris" parent="Vfxs/Vfx2" instance=ExtResource("9_g4jbn")]
+transform = Transform3D(2.71632e-08, 0.621421, 0.783477, 1, -4.37114e-08, 0, 3.42469e-08, 0.783477, -0.621421, -68.9666, -4.68437, -8.92964)
+emitting = true
+
+[node name="Fire" parent="Vfxs/Vfx2" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.621421, 0, 0.783477, 0, 1, 0, -0.783477, 0, -0.621421, -67.0165, -3.43283, -21.6748)
+
+[node name="Fire2" parent="Vfxs/Vfx2" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.621421, 0, 0.783477, 0, 1, 0, -0.783477, 0, -0.621421, -57.3319, 0.576218, -4.47238)
+
+[node name="Fire3" parent="Vfxs/Vfx2" instance=ExtResource("10_qd48l")]
+transform = Transform3D(-0.621421, 0, 0.783477, 0, 1, 0, -0.783477, 0, -0.621421, -65.6224, -3.06019, 4.58515)
+
+[node name="Vfx3" type="Node" parent="Vfxs"]
+process_mode = 4
+
+[node name="Debris" parent="Vfxs/Vfx3" instance=ExtResource("9_g4jbn")]
+transform = Transform3D(-2.45908e-09, -0.0562572, 0.998416, 1, -4.37114e-08, 0, 4.36422e-08, 0.998416, 0.0562572, 35.1903, -14.6484, 53.5873)
+emitting = true
+
+[node name="Fire" parent="Vfxs/Vfx3" instance=ExtResource("10_qd48l")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 40.2952, -10.7076, 35.7647)
+
+[node name="Fire4" parent="Vfxs/Vfx3" instance=ExtResource("10_qd48l")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 40.3073, -14.8141, 50.7388)
+
+[node name="Fire2" parent="Vfxs/Vfx3" instance=ExtResource("10_qd48l")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 29.672, -13.6146, 54.6496)
+
+[node name="Fire3" parent="Vfxs/Vfx3" instance=ExtResource("10_qd48l")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 21.0478, -12.1092, 62.5392)
+
+[node name="Vfx4" type="Node" parent="Vfxs"]
+process_mode = 4
+
+[node name="Debris" parent="Vfxs/Vfx4" instance=ExtResource("9_g4jbn")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -55.2538, 10.5962, 70.2594)
+emitting = true
+
+[node name="Fire" parent="Vfxs/Vfx4" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0614, 19.6013, 73.1932)
+
+[node name="Fire2" parent="Vfxs/Vfx4" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.0928, 10.157, 72.4758)
+
+[node name="Fire3" parent="Vfxs/Vfx4" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1695, 7.14349, 60.3446)
+
+[node name="Vfx5" type="Node" parent="Vfxs"]
+process_mode = 4
+
+[node name="Debris" parent="Vfxs/Vfx5" instance=ExtResource("9_g4jbn")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 72.0833, -10.5999, 12.3257)
+emitting = true
+
+[node name="Fire" parent="Vfxs/Vfx5" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.4786, -9.34839, 21.1672)
+
+[node name="Fire2" parent="Vfxs/Vfx5" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.4472, -5.33934, 10.9981)
+
+[node name="Fire3" parent="Vfxs/Vfx5" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.4527, -8.97575, 0.062602)
+
+[node name="Vfx6" type="Node" parent="Vfxs"]
+process_mode = 4
+
+[node name="Debris" parent="Vfxs/Vfx6" instance=ExtResource("9_g4jbn")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -29.4227, -6.11549, -81.5002)
+emitting = true
+
+[node name="Fire" parent="Vfxs/Vfx6" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5752, -2.49931, -74.4051)
+
+[node name="Fire2" parent="Vfxs/Vfx6" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6172, -2.29704, -83.0603)
+
+[node name="Fire3" parent="Vfxs/Vfx6" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4201, 1.96093, -91.0053)
+
+[node name="Fire4" parent="Vfxs/Vfx6" instance=ExtResource("10_qd48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9136, -4.96169, -86.9202)
 
 [connection signal="timeout" from="VillageTimer" to="." method="_on_village_timer_timeout"]

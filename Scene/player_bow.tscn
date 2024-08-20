@@ -32,13 +32,14 @@ collide_with_bodies = false
 [node name="Bow" parent="Head/Camera" instance=ExtResource("5_y7yt8")]
 
 [node name="Skeleton3D" parent="Head/Camera/Bow/Armature" index="0"]
-bones/1/position = Vector3(0.145269, -0.207052, -0.96013)
-bones/1/rotation = Quaternion(0.00305724, -0.0724611, -0.399592, 0.913819)
-bones/2/position = Vector3(0.374049, -0.114572, -0.987414)
-bones/2/rotation = Quaternion(-0.644006, 0.231317, -0.333792, 0.64833)
+bones/1/position = Vector3(0.143318, -0.211546, -0.960836)
+bones/1/rotation = Quaternion(-0.0145722, -0.0721378, -0.398411, 0.91425)
+bones/2/position = Vector3(0.371681, -0.120353, -0.994803)
+bones/2/rotation = Quaternion(-0.656776, 0.230711, -0.332729, 0.636168)
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 1.5
+one_shot = true
 
 [node name="Charging" type="Timer" parent="."]
 wait_time = 1.1

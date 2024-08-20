@@ -3,6 +3,12 @@ extends Node3D
 
 var VillagesDestroyed = 0
 
+@onready var vfx1 = $Vfxs/Vfx1
+@onready var vfx2 = $Vfxs/Vfx2
+@onready var vfx3 = $Vfxs/Vfx3
+@onready var vfx4 = $Vfxs/Vfx4
+@onready var vfx5 = $Vfxs/Vfx5
+@onready var vfx6 = $Vfxs/Vfx6
 @onready var village_timer = $VillageTimer
 
 func _ready():
@@ -12,12 +18,14 @@ func _on_village_timer_timeout():
 	if VillagesDestroyed == 0:
 		village_timer.start()
 		#destroy village 1 signal
+		vfx1.process_mode = Node.PROCESS_MODE_INHERIT
 		VillagesDestroyed = VillagesDestroyed+1
 		print(VillagesDestroyed)
 		
 	elif VillagesDestroyed == 1:
 		village_timer.start()
 		#destroy village 2 signal
+		vfx2.process_mode = Node.PROCESS_MODE_INHERIT
 		VillagesDestroyed = VillagesDestroyed+1
 		print(VillagesDestroyed)
 		
@@ -25,6 +33,7 @@ func _on_village_timer_timeout():
 		village_timer.wait_time = 12
 		village_timer.start()
 		#destroy village 3 signal
+		vfx3.process_mode = Node.PROCESS_MODE_INHERIT
 		VillagesDestroyed = VillagesDestroyed+1
 		print(VillagesDestroyed)
 		
@@ -32,6 +41,7 @@ func _on_village_timer_timeout():
 		village_timer.wait_time = 9
 		village_timer.start()
 		#destroy village 4 signal
+		vfx4.process_mode = Node.PROCESS_MODE_INHERIT
 		VillagesDestroyed = VillagesDestroyed+1
 		print(VillagesDestroyed)
 		
@@ -39,6 +49,7 @@ func _on_village_timer_timeout():
 		village_timer.wait_time = 12
 		village_timer.start()
 		#destroy village 5 signal
+		vfx5.process_mode = Node.PROCESS_MODE_INHERIT
 		VillagesDestroyed = VillagesDestroyed+1
 		print(VillagesDestroyed)
 		
@@ -46,6 +57,7 @@ func _on_village_timer_timeout():
 		village_timer.wait_time = 3
 		village_timer.start()
 		#destroy village 6 signal and lock weapon
+		vfx6.process_mode = Node.PROCESS_MODE_INHERIT
 		VillagesDestroyed = VillagesDestroyed+1
 		print(VillagesDestroyed)
 	
