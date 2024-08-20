@@ -1,4 +1,6 @@
-extends StaticBody3D
+extends Node3D
+
+signal you_win
 @onready var timer = $Timer
 @onready var dead_scale = load("res://Scene/scaleDead.tscn")
 @onready var dead_scale_y = load("res://Scene/scaleDeadYellow.tscn")
@@ -47,6 +49,7 @@ func _on_area_3d_body_entered(body):
 		instance3.transform = (global_transform)
 		instance3.apply_central_impulse(global_transform.basis.y * 5 )
 	elif lives == 4:
+		you_win.emit()
 		queue_free()
 #func _on_timer_timeout():
 	#queue_free()

@@ -75,5 +75,5 @@ shape = SubResource("BoxShape3D_30aea")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.6245)
 
 [connection signal="input_event" from="PlayCrossbow/MeshInstance3D/crossarea" to="PlayCrossbow" method="_on_crossarea_input_event"]
-[connection signal="input_event" from="Playbow/MeshInstance3D/bowarea" to="PlayCrossbow" method="_on_bowarea_input_event"]
+[connection signal="input_event" from="Playbow/MeshInstance3D/bowarea" to="Playbow" method="_on_bowarea_input_event"]
 [connection signal="input_event" from="Exit/MeshInstance3D/exitarea" to="Exit" method="_on_exitarea_input_event"]
