@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cueluim58u4tw"]
+[gd_scene load_steps=12 format=3 uid="uid://cueluim58u4tw"]
 
 [ext_resource type="Script" path="res://Scene/Play.gd" id="1_6imf3"]
 [ext_resource type="Script" path="res://Scene/Playbow.gd" id="2_4fer0"]
 [ext_resource type="Script" path="res://Scene/Exit.gd" id="3_egspu"]
+[ext_resource type="PackedScene" uid="uid://cnp2cxefxv4at" path="res://Assets/Menu.glb" id="4_fvqdr"]
+[ext_resource type="PackedScene" uid="uid://ddcitcw8wwtqs" path="res://Scene/TestMap.tscn" id="5_5hqec"]
+[ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="6_jpq5p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kk6uf"]
 sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
@@ -18,10 +21,10 @@ background_mode = 2
 sky = SubResource("Sky_ewj1l")
 tonemap_mode = 2
 
-[sub_resource type="BoxMesh" id="BoxMesh_msyr3"]
-size = Vector3(1, 0.4, 0.2)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_30aea"]
+size = Vector3(1.30103, 0.319336, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_msyr3"]
 size = Vector3(1, 0.4, 0.2)
 
 [node name="MainMenu" type="Node3D"]
@@ -30,50 +33,53 @@ size = Vector3(1, 0.4, 0.2)
 environment = SubResource("Environment_jf8y5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.5, 0.75, -0.433013, 0, 0.5, 0.866025, 0.866025, 0.433013, -0.25, 0, 0, 0)
+transform = Transform3D(-0.133358, 0.75, -0.647855, -0.526903, 0.5, 0.687294, 0.839398, 0.433013, 0.328498, 0, 0, 0)
 shadow_enabled = true
 
 [node name="PlayCrossbow" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25151, 2.24872, -0.10504)
 script = ExtResource("1_6imf3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayCrossbow"]
-mesh = SubResource("BoxMesh_msyr3")
-skeleton = NodePath("../..")
+[node name="crossarea" type="Area3D" parent="PlayCrossbow"]
 
-[node name="crossarea" type="Area3D" parent="PlayCrossbow/MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayCrossbow/MeshInstance3D/crossarea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayCrossbow/crossarea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0163269, 0)
 shape = SubResource("BoxShape3D_30aea")
 
 [node name="Playbow" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31021, 2.86769, -0.0754386)
 script = ExtResource("2_4fer0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Playbow"]
-mesh = SubResource("BoxMesh_msyr3")
-skeleton = NodePath("../..")
+[node name="bowarea" type="Area3D" parent="Playbow"]
 
-[node name="bowarea" type="Area3D" parent="Playbow/MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Playbow/MeshInstance3D/bowarea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Playbow/bowarea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0223799, 0)
 shape = SubResource("BoxShape3D_30aea")
 
 [node name="Exit" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.47576, 1.47174, 0.439327)
 script = ExtResource("3_egspu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Exit"]
+visible = false
 mesh = SubResource("BoxMesh_msyr3")
 skeleton = NodePath("../..")
 
-[node name="exitarea" type="Area3D" parent="Exit/MeshInstance3D"]
+[node name="exitarea" type="Area3D" parent="Exit"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Exit/MeshInstance3D/exitarea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exit/exitarea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0311072, 0.00501847, 0)
 shape = SubResource("BoxShape3D_30aea")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.6245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.40009, 2.16384, 2.44378)
 
-[connection signal="input_event" from="PlayCrossbow/MeshInstance3D/crossarea" to="PlayCrossbow" method="_on_crossarea_input_event"]
-[connection signal="input_event" from="Playbow/MeshInstance3D/bowarea" to="Playbow" method="_on_bowarea_input_event"]
-[connection signal="input_event" from="Exit/MeshInstance3D/exitarea" to="Exit" method="_on_exitarea_input_event"]
+[node name="Menu" parent="." instance=ExtResource("4_fvqdr")]
+
+[node name="map" parent="." instance=ExtResource("5_5hqec")]
+
+[node name="Tower" parent="map" instance=ExtResource("6_jpq5p")]
+
+[connection signal="input_event" from="PlayCrossbow/crossarea" to="PlayCrossbow" method="_on_crossarea_input_event"]
+[connection signal="input_event" from="Playbow/bowarea" to="Playbow" method="_on_bowarea_input_event"]
+[connection signal="input_event" from="Exit/exitarea" to="Exit" method="_on_exitarea_input_event"]

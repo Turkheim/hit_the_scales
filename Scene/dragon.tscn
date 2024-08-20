@@ -12,28 +12,6 @@ script = ExtResource("1_if2k6")
 
 [node name="Dragon" parent="." instance=ExtResource("3_ngggp")]
 
-[node name="Skeleton3D" parent="Dragon/DragonRig" index="0"]
-bones/1/rotation = Quaternion(0.0173565, 0.992619, -0.120005, 0.00209836)
-bones/2/rotation = Quaternion(0.121929, -0.00728287, 0.0245036, 0.99221)
-bones/3/rotation = Quaternion(0.245233, -0.0103489, -0.0408725, 0.968547)
-bones/4/rotation = Quaternion(0.795395, 0.592696, 0.102343, 0.0747229)
-bones/5/rotation = Quaternion(-0.126981, -0.000183234, -0.262232, 0.956614)
-bones/6/rotation = Quaternion(-0.135194, -0.0525568, -0.168305, 0.975005)
-bones/7/rotation = Quaternion(0.102344, -5.92917e-08, -6.10017e-09, 0.994749)
-bones/8/rotation = Quaternion(0.0936836, -3.68455e-15, -1.11679e-08, 0.995602)
-bones/9/rotation = Quaternion(0.14974, -1.38778e-14, -1.78504e-08, 0.988725)
-bones/10/rotation = Quaternion(-0.00612965, 1.16573e-14, 7.30711e-10, 0.999981)
-bones/11/rotation = Quaternion(7.26198e-08, 0.273478, 0.961878, 2.0647e-08)
-bones/12/rotation = Quaternion(-0.453283, -3.61043e-14, 6.84438e-08, 0.891367)
-bones/13/rotation = Quaternion(0.192014, 0.0469044, 0.00918797, 0.980228)
-bones/14/rotation = Quaternion(0.192014, 0.0469044, 0.00918797, 0.980228)
-bones/15/rotation = Quaternion(-0.0173565, 0.992619, -0.120005, -0.00209836)
-bones/16/rotation = Quaternion(0.121929, 0.00728264, -0.0245037, 0.99221)
-bones/17/rotation = Quaternion(0.245233, 0.0103492, 0.0408725, 0.968547)
-bones/18/rotation = Quaternion(0.79236, -0.594489, -0.123668, 0.0587779)
-bones/19/rotation = Quaternion(-0.135966, 0.0845228, 0.257687, 0.952873)
-bones/20/rotation = Quaternion(-0.141147, -0.0323038, 0.163344, 0.975886)
-
 [node name="Scale" parent="." instance=ExtResource("2_ywfyn")]
 transform = Transform3D(1, 0, 0, 0, 0.945449, -0.325769, 0, 0.325769, 0.94545, 0, 4.16271, 3.14245)
 
