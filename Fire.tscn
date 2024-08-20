@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://besmhtseuiucy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_puqgq"]
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+disable_ambient_light = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="Curve" id="Curve_w8e52"]
+_data = [Vector2(0, 1), 0.0, -0.247411, 0, 0, Vector2(0.787692, 0), -4.27526, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ruj52"]
+curve = SubResource("Curve_w8e52")
+
+[sub_resource type="Gradient" id="Gradient_1dinm"]
+interpolation_color_space = 1
+offsets = PackedFloat32Array(0, 0.0740741, 0.191919, 1)
+colors = PackedColorArray(2, 2, 1, 1, 2, 1, 0, 1, 0.362829, 0.362829, 0.362829, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0tm4c"]
+gradient = SubResource("Gradient_1dinm")
+
+[sub_resource type="Curve" id="Curve_guhx0"]
+_data = [Vector2(0.00615384, 0.0182705), 0.0, 21.2279, 0, 0, Vector2(0.0307692, 0.69123), 0.0, 0.0, 0, 0, Vector2(0.132308, 0.540804), 0.0, 0.0, 0, 0, Vector2(0.476923, 0.63581), 0.0857699, 0.0857699, 0, 0, Vector2(0.729231, 0.936663), 0.0, 0.0, 0, 0, Vector2(0.836923, 0), 0.0, 0.0, 0, 0]
+point_count = 6
+
+[sub_resource type="CurveTexture" id="CurveTexture_nbxrb"]
+curve = SubResource("Curve_guhx0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7eus8"]
+direction = Vector3(0, 1, 0)
+spread = 76.89
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+angular_velocity_max = 139.09
+gravity = Vector3(0, 5, 0)
+damping_min = 3.0
+damping_max = 5.0
+scale_curve = SubResource("CurveTexture_nbxrb")
+color_ramp = SubResource("GradientTexture1D_0tm4c")
+alpha_curve = SubResource("CurveTexture_ruj52")
+
+[sub_resource type="SphereMesh" id="SphereMesh_mi0yb"]
+radial_segments = 8
+rings = 4
+
+[node name="Fire" type="GPUParticles3D"]
+material_override = SubResource("StandardMaterial3D_puqgq")
+amount = 50
+lifetime = 2.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_7eus8")
+draw_pass_1 = SubResource("SphereMesh_mi0yb")
