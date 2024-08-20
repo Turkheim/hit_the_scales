@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://doyn3ck1c4coi"]
+[gd_scene load_steps=9 format=3 uid="uid://doyn3ck1c4coi"]
 
 [ext_resource type="Script" path="res://Scene/dragon.gd" id="1_if2k6"]
 [ext_resource type="PackedScene" uid="uid://cx3on3m8vnkdv" path="res://Scene/scale.tscn" id="2_ywfyn"]
+[ext_resource type="Texture2D" uid="uid://tposlj6nw73v" path="res://Assets/Dragon.png" id="3_8x0ha"]
 [ext_resource type="PackedScene" uid="uid://cmx80pwwp6yux" path="res://Scene/scaleotherSide.tscn" id="3_fpggf"]
 [ext_resource type="PackedScene" uid="uid://cl5a3fa405qw7" path="res://Scene/DragonRigged.tscn" id="3_ngggp"]
+[ext_resource type="Material" uid="uid://cab1vfc7rpfyd" path="res://Assets/Dragon.tres" id="4_5wn78"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ieax"]
+albedo_texture = ExtResource("3_8x0ha")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tprs8"]
 
@@ -11,6 +16,21 @@
 script = ExtResource("1_if2k6")
 
 [node name="Dragon" parent="." instance=ExtResource("3_ngggp")]
+
+[node name="DragonBody" parent="Dragon/DragonRig/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_8ieax")
+
+[node name="DragonHead" parent="Dragon/DragonRig/Skeleton3D" index="1"]
+material_override = ExtResource("4_5wn78")
+
+[node name="DragonLeg" parent="Dragon/DragonRig/Skeleton3D" index="2"]
+material_override = ExtResource("4_5wn78")
+
+[node name="DragonTail" parent="Dragon/DragonRig/Skeleton3D" index="3"]
+material_override = ExtResource("4_5wn78")
+
+[node name="DragonWing" parent="Dragon/DragonRig/Skeleton3D" index="4"]
+material_override = ExtResource("4_5wn78")
 
 [node name="Scale" parent="." instance=ExtResource("2_ywfyn")]
 transform = Transform3D(1, 0, 0, 0, 0.945449, -0.325769, 0, 0.325769, 0.94545, 0, 4.16271, 3.14245)
