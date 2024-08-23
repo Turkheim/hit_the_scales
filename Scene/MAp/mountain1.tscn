@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://4e0cw1imlg03"]
+
+[ext_resource type="PackedScene" uid="uid://p5hpsx1q8xag" path="res://Assets/Mountain.glb" id="1_iqnby"]
+[ext_resource type="Texture2D" uid="uid://d38ytvb6rqyle" path="res://Assets/Materials and Textures/Mountain.png" id="2_xsusa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktpc2"]
+albedo_color = Color(0.509286, 0.509286, 0.509286, 1)
+albedo_texture = ExtResource("2_xsusa")
+
+[node name="Mountain1" instance=ExtResource("1_iqnby")]
+
+[node name="Mountain" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_ktpc2")

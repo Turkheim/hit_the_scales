@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://htv6gh4m8um5"]
 
 [ext_resource type="PackedScene" uid="uid://dsv6qkriqoyy1" path="res://Assets/map.glb" id="1_pcij6"]
-[ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/Tower.tscn" id="2_xlgte"]
-[ext_resource type="PackedScene" uid="uid://chxa5onwgnh1b" path="res://Scene/player_bow.tscn" id="5_85txm"]
+[ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/MAp/Tower.tscn" id="2_xlgte"]
+[ext_resource type="PackedScene" uid="uid://chxa5onwgnh1b" path="res://Scene/Player/player_bow.tscn" id="5_85txm"]
 [ext_resource type="PackedScene" uid="uid://doyn3ck1c4coi" path="res://Scene/dragon.tscn" id="7_eq3cw"]
 [ext_resource type="Script" path="res://Scripts/pivot.gd" id="7_m25on"]
 

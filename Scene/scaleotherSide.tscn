@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmx80pwwp6yux"]
 
-[ext_resource type="Material" uid="uid://d4gjn10na26tt" path="res://Assets/platinum.tres" id="1_j3vgy"]
-[ext_resource type="Texture2D" uid="uid://bfyl7woiboulv" path="res://Assets/scaleotherSide_Untitled.png" id="2_rwwig"]
+[ext_resource type="Material" uid="uid://d4gjn10na26tt" path="res://Assets/Materials and Textures/platinum.tres" id="1_j3vgy"]
+[ext_resource type="Texture2D" uid="uid://bfyl7woiboulv" path="res://Assets/Materials and Textures/scaleotherSide_Untitled.png" id="2_rwwig"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqcrp"]
 resource_name = "Scale"

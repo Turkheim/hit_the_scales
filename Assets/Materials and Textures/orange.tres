@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d0bihjxmyre13"]
+
+[ext_resource type="Texture2D" uid="uid://nuw8tx2tvtiy" path="res://Assets/Materials and Textures/Scale.png" id="1_318ct"]
+
+[resource]
+albedo_color = Color(1, 0.65098, 0, 1)
+albedo_texture = ExtResource("1_318ct")
+metallic = 1.0
+roughness = 0.4
+grow = true
+grow_amount = -0.05

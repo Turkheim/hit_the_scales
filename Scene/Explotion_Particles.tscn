@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://wvei2d2d2r7w"]
+[gd_scene load_steps=18 format=3 uid="uid://wvei2d2d2r7w"]
 
 [ext_resource type="Texture2D" uid="uid://yjdtv43wo51e" path="res://Flare01.png" id="1_gbc4a"]
 
@@ -16,6 +16,14 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_2bs5w"]
 curve = SubResource("Curve_37ewg")
 
+[sub_resource type="Gradient" id="Gradient_htmkv"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sfno4"]
+gradient = SubResource("Gradient_htmkv")
+use_hdr = true
+
 [sub_resource type="Curve" id="Curve_2k87f"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.90279, 0.0, 0, 0]
 point_count = 2
@@ -27,14 +35,14 @@ curve = SubResource("Curve_2k87f")
 lifetime_randomness = 0.5
 emission_shape = 1
 emission_sphere_radius = 1.0
-spread = 90.0
-initial_velocity_min = 30.0
-initial_velocity_max = 45.0
-gravity = Vector3(0, -19.6, 0)
+initial_velocity_min = 45.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, -50, 0)
 scale_min = 5.0
 scale_max = 6.0
 scale_curve = SubResource("CurveTexture_jmtyd")
 color = Color(0.901961, 0, 0.121569, 1)
+color_ramp = SubResource("GradientTexture1D_sfno4")
 alpha_curve = SubResource("CurveTexture_2bs5w")
 hue_variation_max = 0.2
 
@@ -82,9 +90,10 @@ material_override = SubResource("StandardMaterial3D_gn8jr")
 cast_shadow = 0
 gi_mode = 0
 emitting = false
-amount = 20
-lifetime = 3.0
+amount = 50
+lifetime = 2.0
 one_shot = true
+speed_scale = 2.0
 explosiveness = 1.0
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_11pfy")

@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cab1vfc7rpfyd"]
-
-[ext_resource type="Texture2D" uid="uid://tposlj6nw73v" path="res://Assets/Dragon.png" id="1_7jbfa"]
-
-[resource]
-albedo_texture = ExtResource("1_7jbfa")
-metallic = 1.0
-roughness = 0.56

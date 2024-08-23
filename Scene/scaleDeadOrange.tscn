@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cjyujyuhskugb"]
 
-[ext_resource type="Script" path="res://Scene/scaleDead.gd" id="1_tn2de"]
-[ext_resource type="Material" uid="uid://d0bihjxmyre13" path="res://Assets/orange.tres" id="2_4pwgf"]
-[ext_resource type="Material" uid="uid://div7ycob07tms" path="res://Assets/Yellow.tres" id="2_j7uj5"]
+[ext_resource type="Script" path="res://Scripts/scaleDead.gd" id="1_tn2de"]
+[ext_resource type="Material" uid="uid://d0bihjxmyre13" path="res://Assets/Materials and Textures/orange.tres" id="2_4pwgf"]
+[ext_resource type="Material" uid="uid://div7ycob07tms" path="res://Assets/Materials and Textures/Yellow.tres" id="2_j7uj5"]
 [ext_resource type="PackedScene" uid="uid://citor2y47obew" path="res://Assets/Arrow.glb" id="3_c5a0i"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8vdyc"]

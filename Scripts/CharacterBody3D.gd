@@ -25,7 +25,7 @@ var previously_floored := false
 var tween:Tween
 
 
-@export var projectile = load("res://Scene/Projecticle.tscn")
+@export var projectile = load("res://Scene/Player/Projecticle.tscn")
 
 @onready var camera = $Head/Camera
 #@onready var sound_footsteps = $SoundFootsteps

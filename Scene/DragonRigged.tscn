@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cl5a3fa405qw7"]
 
-[ext_resource type="Texture2D" uid="uid://bmlgltm2s4gef" path="res://Assets/Dragon_Untitled.png" id="1_qynqg"]
+[ext_resource type="Texture2D" uid="uid://bmlgltm2s4gef" path="res://Assets/Materials and Textures/Dragon_Untitled.png" id="1_qynqg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vguw8"]
 resource_name = "Dragon"
