@@ -53,5 +53,6 @@ amount = 200
 lifetime = 10.0
 speed_scale = 2.0
 fixed_fps = 60
+visibility_aabb = AABB(-10, -4.5247, -9.35096, 20, 56.2554, 18.7019)
 process_material = SubResource("ParticleProcessMaterial_7eus8")
 draw_pass_1 = SubResource("SphereMesh_mi0yb")

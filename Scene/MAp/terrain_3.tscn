@@ -1,13 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cil228ue7k8pa"]
 
 [ext_resource type="PackedScene" uid="uid://baar6mv0m23aa" path="res://Assets/Terrain3.glb" id="1_vsxev"]
-[ext_resource type="Texture2D" uid="uid://w7qwavdvob02" path="res://Assets/Materials and Textures/Ground.png" id="2_pig72"]
+[ext_resource type="Texture2D" uid="uid://d4lkxqmhvwx8r" path="res://Assets/Materials and Textures/TERRAIN.png" id="2_otyos"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l35a5"]
-albedo_color = Color(0.513233, 0.513233, 0.513233, 1)
-albedo_texture = ExtResource("2_pig72")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj3wi"]
+albedo_color = Color(0.533037, 0.533037, 0.533037, 1)
+albedo_texture = ExtResource("2_otyos")
 
 [node name="Terrain3" instance=ExtResource("1_vsxev")]
 
 [node name="Terrain" parent="." index="0"]
-material_override = SubResource("StandardMaterial3D_l35a5")
+transform = Transform3D(150, 0, 0, 0, 56.544, 0, 0, 0, 150, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_hj3wi")
