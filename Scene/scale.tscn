@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cx3on3m8vnkdv"]
+[gd_scene load_steps=13 format=3 uid="uid://cx3on3m8vnkdv"]
 
 [ext_resource type="Script" path="res://Scripts/Scale.gd" id="1_e20pu"]
 [ext_resource type="Material" uid="uid://div7ycob07tms" path="res://Assets/Materials and Textures/Yellow.tres" id="2_a6vn3"]
 [ext_resource type="Material" uid="uid://d4gjn10na26tt" path="res://Assets/Materials and Textures/platinum.tres" id="2_mxscb"]
 [ext_resource type="Texture2D" uid="uid://kr8dhht0jti8" path="res://Assets/Materials and Textures/scale_Scale.png" id="3_mxene"]
 [ext_resource type="Material" uid="uid://d0bihjxmyre13" path="res://Assets/Materials and Textures/orange.tres" id="4_lv2l1"]
-[ext_resource type="Material" uid="uid://c2jsmlcnhcfru" path="res://Assets/Materials and Textures/red.tres" id="5_n3xml"]
+[ext_resource type="Shader" uid="uid://133arqh7rrvk" path="res://Scene/new_shader.tres" id="6_dssp2"]
 [ext_resource type="AudioStream" uid="uid://dcmpx1cdbe0tv" path="res://Assets/Sounds/Scale.wav" id="7_1xfkk"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xj102"]
@@ -51,6 +51,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pv517")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0535d"]
+render_priority = 0
+shader = ExtResource("6_dssp2")
+
 [node name="Scale" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.371805)
 script = ExtResource("1_e20pu")
@@ -84,7 +88,7 @@ mesh = SubResource("ArrayMesh_s0u2p")
 skeleton = NodePath("")
 
 [node name="ScaleMeshFlesh" type="MeshInstance3D" parent="."]
-material_override = ExtResource("5_n3xml")
+material_override = SubResource("ShaderMaterial_0535d")
 mesh = SubResource("ArrayMesh_s0u2p")
 skeleton = NodePath("")
 

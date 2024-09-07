@@ -23,6 +23,7 @@ func _on_village_timer_timeout():
 		print(VillagesDestroyed)
 		
 	elif VillagesDestroyed == 1:
+		village_timer.wait_time = 12
 		village_timer.start()
 		#destroy village 2 signal
 		vfx2.process_mode = Node.PROCESS_MODE_INHERIT
@@ -30,7 +31,7 @@ func _on_village_timer_timeout():
 		print(VillagesDestroyed)
 		
 	elif VillagesDestroyed == 2:
-		village_timer.wait_time = 12
+		village_timer.wait_time = 9
 		village_timer.start()
 		#destroy village 3 signal
 		vfx3.process_mode = Node.PROCESS_MODE_INHERIT
@@ -38,7 +39,7 @@ func _on_village_timer_timeout():
 		print(VillagesDestroyed)
 		
 	elif VillagesDestroyed == 3:
-		village_timer.wait_time = 9
+		village_timer.wait_time = 12
 		village_timer.start()
 		#destroy village 4 signal
 		vfx4.process_mode = Node.PROCESS_MODE_INHERIT
@@ -46,7 +47,7 @@ func _on_village_timer_timeout():
 		print(VillagesDestroyed)
 		
 	elif VillagesDestroyed == 4:
-		village_timer.wait_time = 12
+		village_timer.wait_time = 9
 		village_timer.start()
 		#destroy village 5 signal
 		vfx5.process_mode = Node.PROCESS_MODE_INHERIT

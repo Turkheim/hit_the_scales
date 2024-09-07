@@ -4,5 +4,4 @@
 
 [resource]
 albedo_texture = ExtResource("1_7jbfa")
-metallic = 1.0
 roughness = 0.56

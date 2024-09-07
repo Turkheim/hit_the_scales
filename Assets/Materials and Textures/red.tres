@@ -7,5 +7,7 @@ albedo_color = Color(1, 0, 0, 1)
 albedo_texture = ExtResource("1_6pe2n")
 metallic = 1.0
 roughness = 0.4
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
 grow = true
 grow_amount = -0.08

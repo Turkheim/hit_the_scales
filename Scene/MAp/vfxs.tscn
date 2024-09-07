@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl4rpoc4oil1p"]
+
+[ext_resource type="PackedScene" uid="uid://wvei2d2d2r7w" path="res://Scene/Explotion_Particles.tscn" id="1_3hoo0"]
+[ext_resource type="PackedScene" uid="uid://besmhtseuiucy" path="res://Fire.tscn" id="2_uumof"]
+
+[node name="Vfxs" type="Node3D"]
+
+[node name="Vfx1" type="Node3D" parent="."]
+process_mode = 4
+
+[node name="Debris" parent="Vfx1" instance=ExtResource("1_3hoo0")]
+transform = Transform3D(3.86206e-08, 0.883537, 0.468362, 1, -4.37114e-08, 0, 2.04727e-08, 0.468362, -0.883537, 18.7792, 0.0156922, -42.4084)
+emitting = true
+visibility_aabb = AABB(-4.08619, -4, -4, 8.17237, 8, 8)
+
+[node name="Fire" parent="Vfx1" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 25.0737, 3.33452, -46.7287)
+
+[node name="Fire2" parent="Vfx1" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 23.1402, 1.50235, -47.248)
+
+[node name="Fire3" parent="Vfx1" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 27.0011, 2.12889, -44.0548)
+
+[node name="Fire4" parent="Vfx1" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 17.2965, 0.217556, -35.465)
+
+[node name="Fire5" parent="Vfx1" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.883537, 0, 0.468362, 0, 1, 0, -0.468362, 0, -0.883537, 27.868, -1.07939, -35.9152)
+
+[node name="Vfx5" type="Node3D" parent="."]
+process_mode = 4
+
+[node name="Debris" parent="Vfx5" instance=ExtResource("1_3hoo0")]
+transform = Transform3D(2.71632e-08, 0.621421, 0.783477, 1, -4.37114e-08, 0, 3.42469e-08, 0.783477, -0.621421, -57.3701, 4.51422, -0.818708)
+emitting = true
+
+[node name="Fire" parent="Vfx5" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.621421, 0, 0.783477, 0, 1, 0, -0.783477, 0, -0.621421, -62.9216, 4.4109, 1.50022)
+
+[node name="Fire2" parent="Vfx5" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.621421, 0, 0.783477, 0, 1, 0, -0.783477, 0, -0.621421, -53.6693, 5.90367, 8.49037)
+
+[node name="Fire3" parent="Vfx5" instance=ExtResource("2_uumof")]
+transform = Transform3D(-0.621421, 0, 0.783477, 0, 1, 0, -0.783477, 0, -0.621421, -60.5886, 4.85449, 6.56458)
+
+[node name="Vfx4" type="Node3D" parent="."]
+process_mode = 4
+
+[node name="Debris" parent="Vfx4" instance=ExtResource("1_3hoo0")]
+transform = Transform3D(-2.45908e-09, -0.0562572, 0.998416, 1, -4.37114e-08, 0, 4.36422e-08, 0.998416, 0.0562572, 43.2163, 8.69606, 63.458)
+emitting = true
+
+[node name="Fire" parent="Vfx4" instance=ExtResource("2_uumof")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 59.569, -0.553869, 60.9331)
+
+[node name="Fire4" parent="Vfx4" instance=ExtResource("2_uumof")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 57.8549, -1.32469, 53.7196)
+
+[node name="Fire2" parent="Vfx4" instance=ExtResource("2_uumof")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 29.672, -1.93014, 54.6496)
+
+[node name="Fire3" parent="Vfx4" instance=ExtResource("2_uumof")]
+transform = Transform3D(0.0562572, 0, 0.998416, 0, 1, 0, -0.998416, 0, 0.0562572, 42.8143, 0.621339, 62.5392)
+
+[node name="Vfx2" type="Node3D" parent="."]
+process_mode = 4
+
+[node name="Debris" parent="Vfx2" instance=ExtResource("1_3hoo0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -24.2405, 7.72426, 45.7989)
+emitting = true
+
+[node name="Fire" parent="Vfx2" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.2084, 3.27654, 39.1864)
+
+[node name="Fire2" parent="Vfx2" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2587, 3.36221, 43.2053)
+
+[node name="Fire3" parent="Vfx2" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2751, 3.1731, 46.9804)
+
+[node name="Vfx6" type="Node3D" parent="."]
+process_mode = 4
+
+[node name="Debris" parent="Vfx6" instance=ExtResource("1_3hoo0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 58.656, 4.90998, -12.9243)
+emitting = true
+
+[node name="Fire" parent="Vfx6" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.4082, 3.8288, 1.37243)
+
+[node name="Fire2" parent="Vfx6" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5419, 6.74723, -12.1987)
+
+[node name="Fire3" parent="Vfx6" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.9999, 4.68929, -4.2317)
+
+[node name="Vfx3" type="Node3D" parent="."]
+process_mode = 4
+
+[node name="Debris" parent="Vfx3" instance=ExtResource("1_3hoo0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -34.865, 11.6812, -36.847)
+emitting = true
+
+[node name="Fire" parent="Vfx3" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8951, 0.86413, -22.2752)
+
+[node name="Fire2" parent="Vfx3" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1075, -0.338925, -39.4308)
+
+[node name="Fire3" parent="Vfx3" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9859, 11.1039, -34.1711)
+
+[node name="Fire4" parent="Vfx3" instance=ExtResource("2_uumof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.9724, 0.347971, -51.6968)
