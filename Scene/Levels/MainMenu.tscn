@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cy20b624ew63i" path="res://Assets/Materials and Textures/Menu_Untitled.png" id="5_sugmb"]
 [ext_resource type="Material" uid="uid://ca3ail0357o8p" path="res://Assets/Materials and Textures/Tower.tres" id="6_u4i33"]
 [ext_resource type="AudioStream" uid="uid://15e7bcxit148" path="res://Assets/Sounds/Menu.wav" id="7_c3f0k"]
-[ext_resource type="PackedScene" uid="uid://ddcitcw8wwtqs" path="res://Scene/MAp/TestMap.tscn" id="8_uvc6w"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/MAp/Tower.tscn" id="9_74sxb"]
+[ext_resource type="PackedScene" uid="uid://bin1d5aq72b47" path="res://Scene/MAp/map_bloking.tscn" id="9_qepxm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kk6uf"]
 sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
@@ -174,10 +174,16 @@ skeleton = NodePath("")
 stream = ExtResource("7_c3f0k")
 autoplay = true
 
-[node name="map" parent="." instance=ExtResource("8_uvc6w")]
+[node name="Tower" parent="." instance=ExtResource("9_74sxb")]
 
-[node name="Tower" parent="map" instance=ExtResource("9_74sxb")]
+[node name="map_Bloking" parent="." instance=ExtResource("9_qepxm")]
+transform = Transform3D(0.973579, 0, -0.228351, 0, 1, 0, 0.228351, 0, 0.973579, 0, 0, 0)
+
+[node name="Village_005" parent="map_Bloking/biome mill2" index="19"]
+transform = Transform3D(-0.679121, 0, -0.734026, 0, 1, 0, 0.734026, 0, -0.679121, 34.6589, -2.59181, 36.7402)
 
 [connection signal="input_event" from="PlayCrossbow/crossarea" to="PlayCrossbow" method="_on_crossarea_input_event"]
 [connection signal="input_event" from="Playbow/bowarea" to="Playbow" method="_on_bowarea_input_event"]
 [connection signal="input_event" from="Exit/exitarea" to="Exit" method="_on_exitarea_input_event"]
+
+[editable path="map_Bloking"]

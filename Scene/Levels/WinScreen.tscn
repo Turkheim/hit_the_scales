@@ -7,9 +7,9 @@
 [ext_resource type="Material" uid="uid://crsc5uad8bwp" path="res://Assets/Materials and Textures/Menu.tres" id="4_7h4yo"]
 [ext_resource type="Texture2D" uid="uid://cy20b624ew63i" path="res://Assets/Materials and Textures/Menu_Untitled.png" id="5_hdiyc"]
 [ext_resource type="Material" uid="uid://ca3ail0357o8p" path="res://Assets/Materials and Textures/Tower.tres" id="6_5mg08"]
-[ext_resource type="PackedScene" uid="uid://ddcitcw8wwtqs" path="res://Scene/MAp/TestMap.tscn" id="7_3un7c"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/MAp/Tower.tscn" id="8_7fes3"]
 [ext_resource type="AudioStream" uid="uid://b38fkkn78d1so" path="res://Assets/Sounds/WinScreen.wav" id="9_et5te"]
+[ext_resource type="PackedScene" uid="uid://bin1d5aq72b47" path="res://Scene/MAp/map_bloking.tscn" id="10_i0qye"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kk6uf"]
 sky_top_color = Color(0.72983, 0.52263, 0.854484, 1)
@@ -173,14 +173,20 @@ material_override = ExtResource("6_5mg08")
 mesh = SubResource("ArrayMesh_os1yq")
 skeleton = NodePath("")
 
-[node name="map" parent="." instance=ExtResource("7_3un7c")]
-
-[node name="Tower" parent="map" instance=ExtResource("8_7fes3")]
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("9_et5te")
 autoplay = true
 
+[node name="Tower" parent="." instance=ExtResource("8_7fes3")]
+
+[node name="map_Bloking" parent="." instance=ExtResource("10_i0qye")]
+transform = Transform3D(0.481754, 0, -0.876307, 0, 1, 0, 0.876307, 0, 0.481754, 0, 0, 0)
+
+[node name="Village_005" parent="map_Bloking/biome mill2" index="19"]
+transform = Transform3D(-0.974228, 0, -0.225563, 0, 1, 0, 0.225563, 0, -0.974228, 34.6589, -2.59181, 36.7402)
+
 [connection signal="input_event" from="PlayCrossbow/crossarea" to="PlayCrossbow" method="_on_crossarea_input_event"]
 [connection signal="input_event" from="Playbow/bowarea" to="Playbow" method="_on_bowarea_input_event"]
 [connection signal="input_event" from="Exit/exitarea" to="Exit" method="_on_exitarea_input_event"]
+
+[editable path="map_Bloking"]

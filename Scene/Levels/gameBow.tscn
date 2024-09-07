@@ -109,6 +109,7 @@ visible = false
 
 [node name="Vfxs" parent="." instance=ExtResource("9_1owql")]
 
+[connection signal="dragonAttack" from="." to="pivot/Dragon" method="_on_game_dragon_attack"]
 [connection signal="timeout" from="VillageTimer" to="." method="_on_village_timer_timeout"]
 
 [editable path="Vfxs"]

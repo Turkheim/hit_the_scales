@@ -19,6 +19,26 @@ script = ExtResource("1_if2k6")
 
 [node name="Dragon" parent="." instance=ExtResource("3_ngggp")]
 
+[node name="Skeleton3D" parent="Dragon/DragonRig" index="0"]
+bones/1/rotation = Quaternion(0.0172686, 0.987597, -0.156035, 0.00272837)
+bones/2/rotation = Quaternion(0.144302, -0.00861916, 0.0244292, 0.989195)
+bones/3/rotation = Quaternion(0.253788, -0.0107099, -0.0407794, 0.966341)
+bones/4/rotation = Quaternion(0.791683, 0.589493, -0.127926, -0.0968007)
+bones/5/rotation = Quaternion(0.171213, -0.00692762, -0.260645, 0.950107)
+bones/6/rotation = Quaternion(0.0951691, 0.0491031, -0.168423, 0.97988)
+bones/7/rotation = Quaternion(0.0479337, -5.94367e-08, -9.37089e-09, 0.998851)
+bones/8/rotation = Quaternion(0.0598829, 2.6538e-11, -1.11869e-08, 0.998205)
+bones/9/rotation = Quaternion(0.128746, 1.59486e-10, -1.78746e-08, 0.991678)
+bones/10/rotation = Quaternion(0.108761, 1.26079e-09, 4.94742e-10, 0.994068)
+bones/11/rotation = Quaternion(0.0225539, 0.480851, 0.875706, 0.0375938)
+bones/12/rotation = Quaternion(-0.236465, -0.00303009, -0.00352432, 0.971629)
+bones/15/rotation = Quaternion(-0.0172475, 0.986389, -0.163499, -0.00285888)
+bones/16/rotation = Quaternion(0.148738, 0.00888389, -0.0244129, 0.988535)
+bones/17/rotation = Quaternion(0.255994, 0.0108033, 0.0407548, 0.965759)
+bones/18/rotation = Quaternion(0.794833, -0.586681, 0.106618, -0.112598)
+bones/19/rotation = Quaternion(0.162105, 0.0906671, 0.266405, 0.945796)
+bones/20/rotation = Quaternion(0.0890632, -0.134003, 0.17173, 0.971915)
+
 [node name="DragonBody" parent="Dragon/DragonRig/Skeleton3D" index="0"]
 material_override = SubResource("StandardMaterial3D_8ieax")
 
@@ -79,6 +99,12 @@ transform = Transform3D(0.140856, 0.963997, -0.22554, -0.982941, 0.163383, 0.084
 [node name="scaleotherSide" parent="." instance=ExtResource("3_fpggf")]
 
 [node name="DeathTimer" type="Timer" parent="."]
+process_callback = 0
+
+[node name="AttackTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 3.0
+one_shot = true
 
 [node name="Dragonskin" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_tprs8")
@@ -105,5 +131,6 @@ stream = ExtResource("8_m571d")
 [connection signal="you_win" from="Scale12" to="." method="_on_scale_12_you_win"]
 [connection signal="you_win" from="Scale13" to="." method="_on_scale_13_you_win"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 
 [editable path="Dragon"]

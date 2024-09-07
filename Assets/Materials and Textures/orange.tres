@@ -8,4 +8,4 @@ albedo_texture = ExtResource("1_318ct")
 metallic = 1.0
 roughness = 0.4
 grow = true
-grow_amount = -0.05
+grow_amount = 0.02

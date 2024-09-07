@@ -4,4 +4,5 @@
 
 [resource]
 albedo_texture = ExtResource("1_7jbfa")
-roughness = 0.56
+metallic_specular = 0.0
+roughness = 0.0
