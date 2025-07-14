@@ -175,4 +175,3 @@ func crearProyectil():
 	
 	#Empujamos el proyectil con fuerza para adelante
 	instance.apply_central_impulse($Head/Camera/Bow/Armature/Skeleton3D/Arrow/Marker3D_Bow.global_transform.basis.z * arrow_strength * -1)
-

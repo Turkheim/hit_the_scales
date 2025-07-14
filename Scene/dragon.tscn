@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://doyn3ck1c4coi"]
 
-[ext_resource type="Script" path="res://Scripts/dragon.gd" id="1_if2k6"]
+[ext_resource type="Script" uid="uid://bqrfxg02ejluj" path="res://Scripts/dragon.gd" id="1_if2k6"]
 [ext_resource type="PackedScene" uid="uid://cx3on3m8vnkdv" path="res://Scene/scale.tscn" id="2_ywfyn"]
 [ext_resource type="Texture2D" uid="uid://tposlj6nw73v" path="res://Assets/Materials and Textures/Dragon.png" id="3_8x0ha"]
 [ext_resource type="PackedScene" uid="uid://cmx80pwwp6yux" path="res://Scene/scaleotherSide.tscn" id="3_fpggf"]

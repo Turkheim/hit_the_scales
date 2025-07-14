@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://sflt4vjx1ur6"]
 
-[ext_resource type="Script" path="res://Scripts/gameCrossbow.gd" id="1_eaquj"]
+[ext_resource type="Script" uid="uid://ci36p0ckifw1n" path="res://Scripts/gameCrossbow.gd" id="1_eaquj"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/MAp/Tower.tscn" id="2_f5o8s"]
-[ext_resource type="Script" path="res://Scripts/pivot.gd" id="3_spugq"]
+[ext_resource type="Script" uid="uid://hssio5wfrfg5" path="res://Scripts/pivot.gd" id="3_spugq"]
 [ext_resource type="PackedScene" uid="uid://doyn3ck1c4coi" path="res://Scene/dragon.tscn" id="4_7y5ga"]
 [ext_resource type="PackedScene" uid="uid://b7qjeferncikl" path="res://Scene/Player/player_crossbow.tscn" id="5_wqq3s"]
 [ext_resource type="PackedScene" uid="uid://ddcitcw8wwtqs" path="res://Scene/MAp/TestMap.tscn" id="7_4p151"]
@@ -58,8 +58,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aak3a"]
 _data = {
-"RESET": SubResource("Animation_41d4g"),
-"bobing": SubResource("Animation_m6xke")
+&"RESET": SubResource("Animation_41d4g"),
+&"bobing": SubResource("Animation_m6xke")
 }
 
 [node name="Game" type="Node3D"]

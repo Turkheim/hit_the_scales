@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://chxa5onwgnh1b"]
 
-[ext_resource type="Script" path="res://Scripts/Player_Bow.gd" id="1_7xutm"]
+[ext_resource type="Script" uid="uid://bty34r2oydgnk" path="res://Scripts/Player_Bow.gd" id="1_7xutm"]
 [ext_resource type="PackedScene" uid="uid://g32fc7j8la3x" path="res://Scene/Player/Bow.tscn" id="5_y7yt8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fwvik"]

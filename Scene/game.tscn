@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/MAp/Tower.tscn" id="2_xlgte"]
 [ext_resource type="PackedScene" uid="uid://chxa5onwgnh1b" path="res://Scene/Player/player_bow.tscn" id="5_85txm"]
 [ext_resource type="PackedScene" uid="uid://doyn3ck1c4coi" path="res://Scene/dragon.tscn" id="7_eq3cw"]
-[ext_resource type="Script" path="res://Scripts/pivot.gd" id="7_m25on"]
+[ext_resource type="Script" uid="uid://hssio5wfrfg5" path="res://Scripts/pivot.gd" id="7_m25on"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8ksl2"]
 sky_top_color = Color(0.565454, 0.584515, 0.917651, 1)
@@ -54,8 +54,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aak3a"]
 _data = {
-"RESET": SubResource("Animation_41d4g"),
-"bobing": SubResource("Animation_m6xke")
+&"RESET": SubResource("Animation_41d4g"),
+&"bobing": SubResource("Animation_m6xke")
 }
 
 [node name="Game" type="Node3D"]

@@ -156,4 +156,3 @@ func crearProyectil():
 	
 	#Empujamos el proyectil con fuerza para adelante
 	instance.apply_central_impulse($Head/Camera/Crossbow/Arrow2/Marker3D.global_transform.basis.z * arrow_strength * -1)
-

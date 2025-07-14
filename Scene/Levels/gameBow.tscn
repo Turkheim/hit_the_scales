@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://dtox7gk5rw13d"]
 
-[ext_resource type="Script" path="res://Scripts/gameCrossbow.gd" id="1_yfyfs"]
+[ext_resource type="Script" uid="uid://ci36p0ckifw1n" path="res://Scripts/gameCrossbow.gd" id="1_yfyfs"]
 [ext_resource type="PackedScene" uid="uid://nfc1oy302yj8" path="res://Scene/MAp/Tower.tscn" id="2_sm4yl"]
-[ext_resource type="Script" path="res://Scripts/pivot.gd" id="3_dgbnj"]
+[ext_resource type="Script" uid="uid://hssio5wfrfg5" path="res://Scripts/pivot.gd" id="3_dgbnj"]
 [ext_resource type="PackedScene" uid="uid://doyn3ck1c4coi" path="res://Scene/dragon.tscn" id="4_04ksr"]
 [ext_resource type="AudioStream" uid="uid://d2ngftqngo7im" path="res://Assets/Sounds/LevelSong.wav" id="6_nsb57"]
 [ext_resource type="PackedScene" uid="uid://chxa5onwgnh1b" path="res://Scene/Player/player_bow.tscn" id="7_pfmni"]
@@ -58,8 +58,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aak3a"]
 _data = {
-"RESET": SubResource("Animation_41d4g"),
-"bobing": SubResource("Animation_m6xke")
+&"RESET": SubResource("Animation_41d4g"),
+&"bobing": SubResource("Animation_m6xke")
 }
 
 [node name="Game" type="Node3D"]
@@ -88,7 +88,7 @@ transform = Transform3D(0.642788, 0.766044, -5.95772e-09, -0.766044, 0.642788, -
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="pivot/Dragon"]
 libraries = {
-"": SubResource("AnimationLibrary_aak3a")
+&"": SubResource("AnimationLibrary_aak3a")
 }
 autoplay = "bobing"
 
@@ -109,7 +109,12 @@ visible = false
 
 [node name="Vfxs" parent="." instance=ExtResource("9_1owql")]
 
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
 [connection signal="dragonAttack" from="." to="pivot/Dragon" method="_on_game_dragon_attack"]
+[connection signal="you_win" from="pivot/Dragon" to="." method="_on_dragon_you_win"]
 [connection signal="timeout" from="VillageTimer" to="." method="_on_village_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="Vfxs"]
